@@ -42,7 +42,7 @@ class MailRuParser(object):
         return {'pc': pagecount, 'sn': snippets}
 
     def is_not_found(self):
-        return self.json_data['serp']['count_show'] == 0
+        return self.json_data['serp']['count_show'] == 0 and not self.is_blocked()
 
     def is_blocked(self):
         return self.json_data['antirobot']['blocked']
@@ -51,24 +51,18 @@ class MailRuParser(object):
         return self.json_data['serp']['count_show']
 
     def get_captcha_data(self):
-        is_captcha = 'input_adr' in self.content and 'SequreWord' in self.content
-        if not is_captcha:
+        if not self.json_data['antirobot']['blocked']:
             return
         
-        captcha = self.captcha_re.get('captcha').findall(self.content)[0]
-        if not captcha:
-            raise MatchCaptchaError()
-        
-        url_image = captcha
-        if not url_image.startswith('http'):
-            url_image = self.captcha_image_url.format(image_url=captcha)
-        
+        qid =self.json_data['antirobot']['qid']
+        url_image = 'http://go.mail.ru/ar_captcha?id={0}'.format(
+            self.json_data['antirobot']['qid']
+        )
+
         return {
             'url': url_image,
-            'match_captcha_sqid': self.captcha_re.get('sqid').findall(self.content)[0],
-            'match_captcha_back': self.captcha_re.get('sf').findall(self.content)[0],
-            'match_captcha_q': self.captcha_re.get('q').findall(self.content)[0],
-            'match_captcha_errback': self.captcha_re.get('errback').findall(self.content)[0]
+            'sqid': qid,
+            'ajax': '1',
         }
 
     def get_snippets(self):
