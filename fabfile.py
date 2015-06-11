@@ -1,6 +1,5 @@
 from fabric.api import local, task, quiet
 
-
 @task
 def release():
     with quiet():
