@@ -8,7 +8,7 @@ setup(
     description="Parse html content of Mail.ru",
     version=VERSION,
     url='https://github.com/KokocGroup/mailru-parser',
-    download_url='https://github.com/KokocGroup/mailru-parser/tarball/v{}'.format(VERSION),
+    download_url='https://github.com/KokocGroup/mailru-parser/tarball/v{0}'.format(VERSION),
     packages=['mailru_parser'],
     install_requires=[
 #         'pyquery==1.2.9',
