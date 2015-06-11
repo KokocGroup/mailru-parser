@@ -1,7 +1,7 @@
 from setuptools import setup
 
 
-VERSION = "0.0.1"
+VERSION = "0.0.2"
 
 setup(
     name='mailru-parser',
@@ -9,7 +9,7 @@ setup(
     version=VERSION,
     url='https://github.com/KokocGroup/mailru-parser',
     download_url='https://github.com/KokocGroup/mailru-parser/tarball/v{}'.format(VERSION),
-    packages=['mailru-parser'],
+    packages=['mailru_parser'],
     install_requires=[
 #         'pyquery==1.2.9',
 #         'lxml==2.3.4',
