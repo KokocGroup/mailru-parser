@@ -9,7 +9,7 @@ from mailru_parser.exceptions import EmptySerp, MatchCaptchaError
 
 
 class MailRuParser(object):
-    json_data_re = re.compile('.*?go.dataJson\s*=\s*(.*?);</script>', re.DOTALL)
+    json_data_re = re.compile('.*?go.dataJson\s*=\s*(.*?);\s*</script>', re.DOTALL)
 
     params_regexr = re.U | re.M | re.DOTALL | re.I
     captcha_re = {
@@ -19,10 +19,10 @@ class MailRuParser(object):
         'errback': re.compile('<input.*?name=\"errback\".*?value=\"([^\"]+)\".*?>', params_regexr),
         'q': re.compile('<input.*?name=\"q\".*?value=\"([^\"]+)\".*?>', params_regexr)
     }
-    
+
     captcha_image_url = "http://go.mail.ru{image_url}"
-    
-    
+
+
     def __init__(self, content, snippet_fileds=('d', 'p', 'u', 't', 's', 'm')):
         self.content = to_unicode(content)
         self.snippet_fileds = snippet_fileds
@@ -32,13 +32,13 @@ class MailRuParser(object):
     def get_serp(self):
         if self.is_not_found():
             return {'pc': 0, 'sn': []}
-        
+
         pagecount = self.get_pagecount()
         snippets = self.get_snippets()
-        
+
         if not snippets:
             raise EmptySerp()
-        
+
         return {'pc': pagecount, 'sn': snippets}
 
     def is_not_found(self):
@@ -53,7 +53,7 @@ class MailRuParser(object):
     def get_captcha_data(self):
         if not self.json_data['antirobot']['blocked']:
             return
-        
+
         qid =self.json_data['antirobot']['qid']
         url_image = 'http://go.mail.ru/ar_captcha?id={0}'.format(
             self.json_data['antirobot']['qid']
@@ -68,7 +68,7 @@ class MailRuParser(object):
     def get_snippets(self):
         serp = self.json_data['serp']['results']
         serp.sort(key=lambda x: x['number'])
-        
+
         snippets = []
         position = 0
         for snippet in serp:
@@ -79,16 +79,16 @@ class MailRuParser(object):
             parsed_snippet['p'] = position
             snippets.append(parsed_snippet)
         return snippets
-            
+
     def _parse_snippet(self, raw_snippet):
         if 'smack_type' in raw_snippet:
             return {}
-        
+
         title = raw_snippet['title']
         url = raw_snippet['url']
         if not url:
             return {}
-        
+
         try:
             domain = get_full_domain_without_scheme(url)
         except UnicodeError as e:
@@ -105,9 +105,9 @@ class MailRuParser(object):
             snippet['t'] = title
         if 's' in self.snippet_fileds:
             snippet['s'] = raw_snippet['passage']
-            
+
         return snippet
-        
+
     def _is_map_snippet(self, raw_snippet):
         return False
 
@@ -115,15 +115,15 @@ class MailRuParser(object):
     def json_data(self):
         if self._json_data:
             return self._json_data
-        
+
         match = self.json_data_re.match(self.content)
         if not match:
             raise Exception('no json data in response')
-        
+
         self._json_data = json.loads(match.group(1))
         return self._json_data
-        
-        
+
+
 def to_unicode(content, from_charset=None):
     u"""Безопасное приведение к юникоду
 
@@ -257,13 +257,3 @@ def get_full_domain_without_scheme(url):
     absolute_url = normalize(url).replace('//www.', '//')
     parsed = urlparse(absolute_url)
     return urlunsplit(('', parsed.netloc, '', '', '')).replace('//', '')
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
