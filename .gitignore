@@ -13,3 +13,6 @@
 *.sublime-workspace
 
 setup.pysetup.py
+
+dist
+mailru_parser.egg-info
