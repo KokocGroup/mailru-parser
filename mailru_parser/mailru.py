@@ -96,6 +96,9 @@ class MailRuParser(object):
         return match.group(1)
 
     def get_captcha_data(self):
+        if '<div class="antirobot' not in self.content:
+            return
+
         sqid = self._get_captcha_sqid()
         q = self._get_captcha_q()
         back = self._get_captcha_back()

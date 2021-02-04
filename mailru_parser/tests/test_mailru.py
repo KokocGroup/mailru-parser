@@ -48,6 +48,13 @@ class MailRuParserTestCase(MailRuParserTests):
         self.assertEqual(captcha['errback'], u'https://go.mail.ru/search?q=test&amp;frm=captcha_error')
         self.assertEqual(captcha['SequreWord'], None)
 
+    def test5(self):
+        html = self.get_data('2021-02-04.html')
+        captcha = MailRuParser(html).get_captcha_data()
+
+        self.assertEqual(captcha, None)
+
 
 if __name__ == '__main__':
     unittest.main()
+
