@@ -54,6 +54,31 @@ class MailRuParserTestCase(MailRuParserTests):
 
         self.assertEqual(captcha, None)
 
+    def test6(self):
+        html = self.get_data('2021-02-04-1.html')
+        serp = MailRuParser(html).get_serp()
+
+        self.assertEqual(serp['pc'], 445094)
+        self.assertEqual(len(serp['sn']), 10)
+
+        self.assertEqual(serp['sn'][0]['d'], 'lully.ru')
+        self.assertEqual(serp['sn'][0]['p'], 1)
+        self.assertEqual(serp['sn'][0]['t'], u'Главная')
+        self.assertEqual(serp['sn'][0]['u'], 'http://www.lully.ru/')
+        self.assertEqual(serp['sn'][0]['s'], u'Благодарим за понимание и надеемся на дальнейшее долгосрочное сотрудничество. Уважаемые покупатели и почитатели дизайн-<b>радиаторов</b> <b>Lully</b>.')
+
+        self.assertEqual(serp['sn'][8]['d'], 'spbklimat.ru')
+        self.assertEqual(serp['sn'][8]['p'], 9)
+        self.assertEqual(serp['sn'][8]['t'], 'spbklimat.ru/upload/catalog_<b><b>lully</b></b>_for web_2.pdf')
+        self.assertEqual(serp['sn'][8]['u'], 'http://www.spbklimat.ru/upload/catalog_lully_for%20web_2.pdf')
+        self.assertEqual(serp['sn'][8]['s'], u'Дизайн-<b>радиаторы</b> «<b>Lully</b>» — что это? Больше всего дизайн-<b>радиаторы</b> напоминают элегантные декоративные панно.')
+
+        self.assertEqual(serp['sn'][9]['d'], 'ru.all.biz')
+        self.assertEqual(serp['sn'][9]['p'], 10)
+        self.assertEqual(serp['sn'][9]['t'], u'<b>Радиаторы</b> <b>lully</b> в России. Сравнить цены и купить <b>Радиаторы</b> <b>Lully</b> на...')
+        self.assertEqual(serp['sn'][9]['u'], 'http://ru.all.biz/radiatory-lully-cpk12388961')
+        self.assertEqual(serp['sn'][9]['s'], u'<b>Радиаторы</b> <b>lully</b> купить в России по лучшим ценам. Заказывайте <b>Радиаторы</b> <b>Lully</b> прямо сейчас на сайте ru.all.biz')
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -132,7 +132,7 @@ class MailRuParser(object):
 
     def _get_url_title(self, html):
         match = re.search(
-            '<h3 class="result__title">\s*<a\s*class="light-link"[^>]+?,\s+\'([^\']+?)\',\s+[^>]+?>\s*(.*?)\s*</a>\s*</h3>',
+            '<h3 class="result__title">.*?<a\s*class="light-link"[^>]+?,\s+\'([^\']+?)\',\s+[^>]+?>\s*(.*?)\s*</a>\s*</h3>',
             html,
             flags=self.params_regexr
         )
