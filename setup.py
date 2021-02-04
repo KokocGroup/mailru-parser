@@ -11,7 +11,7 @@ setup(
     download_url='https://github.com/KokocGroup/mailru-parser/tarball/v{0}'.format(VERSION),
     packages=['mailru_parser'],
     install_requires=[
-#         'pyquery==1.2.9',
-#         'lxml==2.3.4',
+         'pyquery==1.2.1',
+         'lxml==2.3.4',
     ],
 )
