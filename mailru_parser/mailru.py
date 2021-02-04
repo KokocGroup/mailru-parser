@@ -1,17 +1,21 @@
 # -*- coding:utf-8 -*-
+import HTMLParser
 import json
 import re
 import unicodedata
 from urllib import quote, unquote
 from urlparse import urlparse, urlunsplit, urlsplit
+from lxml import etree
 
-from mailru_parser.exceptions import EmptySerp, MatchCaptchaError
+from mailru_parser.exceptions import EmptySerp, MatchCaptchaError, MailRuParserError
+from pyquery import PyQuery
 
 
 class MailRuParser(object):
-    json_data_re = re.compile('.*?go.dataJson\s*=\s*(.*?);\s*</script>', re.DOTALL)
-
     params_regexr = re.U | re.M | re.DOTALL | re.I
+
+    json_data_re = re.compile('var STP\s*=\s*(\{.*?\});', flags=params_regexr)
+
     captcha_re = {
         'captcha': re.compile('<img src="(/ar_captcha\?id=.*?)"', params_regexr),
         'sqid': re.compile('<input.*?name=\"sqid\".*?value=\"([^\"]+)\".*?>', params_regexr),
@@ -30,10 +34,10 @@ class MailRuParser(object):
         self._json_data = None
 
     def get_serp(self):
-        if self.is_not_found():
+        pagecount = self.get_pagecount()
+        if pagecount == 0:
             return {'pc': 0, 'sn': []}
 
-        pagecount = self.get_pagecount()
         snippets = self.get_snippets()
 
         if not snippets:
@@ -41,54 +45,116 @@ class MailRuParser(object):
 
         return {'pc': pagecount, 'sn': snippets}
 
-    def is_not_found(self):
-        return self.json_data['serp']['count_show'] == 0 and not self.is_blocked()
+    def get_pagecount(self):
+        match = re.search('foundCount:\s*(\d+),', self.content, flags=self.params_regexr)
+        if not match:
+            raise MailRuParserError('Not exists foundCount')
+
+        return int(match.group(1))
 
     def is_blocked(self):
         return self.json_data['antirobot']['blocked']
 
-    def get_pagecount(self):
-        return self.json_data['serp']['count_show']
+    def _get_captcha_sqid(self):
+        match = re.search(
+            '<input type="hidden" name="sqid" value="([^"]+?)"',
+            self.content,
+            flags=self.params_regexr
+        )
+        if not match:
+            raise MailRuParserError('Not found captcha sqid')
+        return match.group(1)
+
+    def _get_captcha_q(self):
+        match = re.search(
+            '<input type="hidden" name="q" value="([^"]+?)"',
+            self.content,
+            flags=self.params_regexr
+        )
+        if not match:
+            raise MailRuParserError('Not found captcha q')
+        return match.group(1)
+
+    def _get_captcha_back(self):
+        match = re.search(
+            '<input type="hidden" name="back" value="([^"]+?)"',
+            self.content,
+            flags=self.params_regexr
+        )
+        if not match:
+            raise MailRuParserError('Not found captcha back')
+        return match.group(1)
+
+    def _get_captcha_errback(self):
+        match = re.search(
+            '<input type="hidden" name="errback" value="([^"]+?)"',
+            self.content,
+            flags=self.params_regexr
+        )
+        if not match:
+            raise MailRuParserError('Not found captcha sqid')
+        return match.group(1)
 
     def get_captcha_data(self):
-        if not self.json_data['antirobot']['blocked']:
-            return
+        sqid = self._get_captcha_sqid()
+        q = self._get_captcha_q()
+        back = self._get_captcha_back()
+        errback = self._get_captcha_errback()
 
-        qid =self.json_data['antirobot']['qid']
-        url_image = 'http://go.mail.ru/ar_captcha?id={0}'.format(
-            self.json_data['antirobot']['qid']
-        )
-
+        url = 'http://go.mail.ru/ar_captcha?id={0}'.format(sqid)
         return {
-            'url': url_image,
-            'sqid': qid,
+            'url': url,
+            'q': q,
+            'sqid': sqid,
+            'back': back,
+            'errback': errback,
+            'SequreWord': None,
             'ajax': '1',
         }
 
     def get_snippets(self):
-        serp = self.json_data['serp']['results']
-        serp.sort(key=lambda x: x['number'])
+
+        dom = PyQuery(self.content)
+        elements = dom('li.result__li')
 
         snippets = []
         position = 0
-        for snippet in serp:
-            parsed_snippet = self._parse_snippet(snippet)
-            if not parsed_snippet:
-                continue
+        for element in elements:
+            html = etree.tostring(element)
+            snippet = self._parse_snippet(html)
             position += 1
-            parsed_snippet['p'] = position
-            snippets.append(parsed_snippet)
+            snippet['p'] = position
+            snippets.append(snippet)
         return snippets
 
-    def _parse_snippet(self, raw_snippet):
-        if 'smack_type' in raw_snippet:
-            return {}
+    def _get_url_title(self, html):
+        match = re.search(
+            '<h3 class="result__title">\s*<a\s*class="light-link"[^>]+?,\s+\'([^\']+?)\',\s+[^>]+?>\s*(.*?)\s*</a>\s*</h3>',
+            html,
+            flags=self.params_regexr
+        )
+        if not match:
+            raise MailRuParserError('not found url and title')
 
-        title = raw_snippet['title']
-        url = raw_snippet['url']
-        if not url:
-            return {}
+        return match.group(1), HTMLParser.HTMLParser().unescape(match.group(2))
 
+    def _get_descr(self, html):
+        if 's' not in self.snippet_fileds:
+            return None
+
+        match = re.search(
+            '<div class="result__snp">\s*(.*?)\s*</div>',
+            html,
+            flags=self.params_regexr
+        )
+        if not match:
+            return None
+
+        return HTMLParser.HTMLParser().unescape(match.group(1))
+
+    def _parse_snippet(self, html):
+
+        url, title = self._get_url_title(html)
         try:
             domain = get_full_domain_without_scheme(url)
         except UnicodeError as e:
@@ -97,18 +163,17 @@ class MailRuParser(object):
         snippet = {
             'd': domain,  # domain
             'u': url,  # url
-            'm': self._is_map_snippet(raw_snippet),  # map
+            'm': self._is_map_snippet(html),  # map
             't': None,  # title snippet
-            's': None,  # body snippet
+            's': self._get_descr(html),  # body snippet
         }
+
         if 't' in self.snippet_fileds:
             snippet['t'] = title
-        if 's' in self.snippet_fileds:
-            snippet['s'] = raw_snippet['passage']
 
         return snippet
 
-    def _is_map_snippet(self, raw_snippet):
+    def _is_map_snippet(self, html):
         return False
 
     @property
@@ -116,10 +181,11 @@ class MailRuParser(object):
         if self._json_data:
             return self._json_data
 
-        match = self.json_data_re.match(self.content)
+        match = self.json_data_re.search(self.content)
         if not match:
-            raise Exception('no json data in response')
+            raise MailRuParserError('json not found')
 
+        print(match.group(1))
         self._json_data = json.loads(match.group(1))
         return self._json_data
 

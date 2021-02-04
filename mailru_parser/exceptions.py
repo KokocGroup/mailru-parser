@@ -4,5 +4,9 @@
 class EmptySerp(Exception):
     pass
 
-class MatchCaptchaError(Exception):
+class MailRuParserError(Exception):
     pass
+
+class MatchCaptchaError(MailRuParserError):
+    pass
+

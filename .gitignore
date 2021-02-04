@@ -1,0 +1,15 @@
+*.pyc
+*.tmp
+
+# pycharm
+.idea/
+
+# eclipse
+.project
+.pydevproject
+
+# sublime
+*.sublime-project
+*.sublime-workspace
+
+setup.pysetup.py

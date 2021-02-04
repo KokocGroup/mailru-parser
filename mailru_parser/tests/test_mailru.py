@@ -3,47 +3,50 @@ import unittest
 from mailru_parser.tests import MailRuParserTests
 from mailru_parser.mailru import MailRuParser
 
+
 class MailRuParserTestCase(MailRuParserTests):
-    def test_serp(self):
-        snippets = [
-            (1, "http://www.hobbit.ru/", u"Хоббит - производство <b>окон</b> из алюминия, ПВХ, дерева", u"Каталог продукции: <b>оконные</b> систем из ПВХ-профиля и алюминия, деревянные <b>окна</b> из клееного бруса (ангарская сосна, лиственница) по немецкой технологии."),
-            (2, "http://www.plastok.ru/", u"Пластиковые <b>окна</b> цены производителя в Москве - купить недорого...", u"Компания «ПЛАСТОК» с 1993 года производит качественные пластиковые <b>окна</b> из профилей Rehau, КБЕ, Schuco, Alutech и Provedal на собственном заводе в..."),
-            (3, "http://oknabm.ru/", u"Бизнес-М - производство пластиковых <b>окон</b>", u"Информация о продукции (алюминиевые и пластиковые <b>окна</b>). Остекление балконов и лоджий. Расчёт стоимости. Потребительские качества <b>окон</b> и изделий из..."),
-            (4, "http://www.fabrikaokon.ru/", u"«Фабрика <b>окон</b>»: производство пластиковых <b>окон</b>", u"Мы предоставляем вашему вниманию обширный выбор <b>окон</b> для любых климатических условий. Широкий ассортимент с одно- и двухкамерными стеклопакетами..."),
-            (5, "https://ru.wikipedia.org/wiki/%D0%9E%D0%BA%D0%BD%D0%B0_(%D1%82%D0%B5%D0%BB%D0%B5%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0)", u"<b>Окна</b> (<b>телепрограмма</b>) — Википедия", u"«<b>Окна</b>» — ток-шоу, транслировавшееся с 2002 по 2005 год на телеканале ТНТ, а ранее на телеканале СТС. В постановке разыгрывались различные жизненные ситуации и конфликты, зачастую с использованием ненормативной лексики (закрывающейся звуком «Пи»), нередко приводившие к дракам и потасовкам."),
-            (6, "http://www.mosokna.ru/", u"Московские <b>окна</b>", u"«Московские <b>окна</b>» предлагает своим клиентам пластиковые <b>окна</b> и балконные конструкции, входные и межофисные двери из ПВХ и алюминия, индивидуальное..."),
-            (7, "http://trueinform.ru/modules.php?file=article&name=News&sid=38814", u"<b>Окна</b> металлопластиковые - Санкт-Петербург и область. Новости,...", u"Компании, занимающиеся установкой металлопластиковых <b>окон</b> в Санкт-Петербурге и области, помогут клиентам сделать правильный выбор и предоставят всю..."),
-            (8, "http://www.okna.ru/", u"Kaleva - изготовление и установка пластиковых <b>окон</b>", u"Описание продукции - <b>окон</b>, дополнительных элементов. Остекление балконов и лоджий. Информация для потребителя: типы откосов, виды герметиков..."),
-            (9, "http://www.eurookna.ru/", u"Пластиковые <b>окна</b> ПВХ: продажа и установка <b>окон</b> от производителя № 1...", u"Умелая организация собственного производства, оптимизированная система расчета стоимости <b>окон</b> позволяет предлагать клиентам приемлемые цены на..."),
-            (10, "http://www.okna5.ru/", u"<b>Окна</b> ПВХ Rehau в Москве – производство и продажа, расчет стоимости....", u"Отличные <b>окна</b> — настоящее немецкое качество.<span class=\"snsep\"> ... </span>Вы зашли на сайт во время \"счастливого часа\". Оставьте заявку сейчас и получите скидку 4000 рублей."),
-        ]
-        html = self.get_data('serp_1.html')
-        
-        parser = MailRuParser(html)
-        serp = parser.get_serp()
-        
-        self.assertFalse(parser.is_not_found())
-        
-        self.assertEquals(serp['pc'], 12882797)
-        self.assertEquals(len(serp['sn']), 10)
-        
-        for i, sn in enumerate(serp['sn']):
-            exp_sn = snippets[i]
-            self.assertEquals(sn['p'], exp_sn[0])
-            self.assertEquals(sn['u'], exp_sn[1])
-            self.assertEquals(sn['t'], exp_sn[2])
-            self.assertEquals(sn['s'], exp_sn[3])
+    def test1(self):
+        html = self.get_data('not_found.html')
+        serp = MailRuParser(html).get_serp()
+        self.assertEqual(serp['sn'], [])
+        self.assertEqual(serp['pc'], 0)
 
-    def test_captcha_found(self):
+    def test2(self):
         html = self.get_data('not_found_1.html')
-        self.assertTrue(MailRuParser(html).is_not_found())
+        serp = MailRuParser(html).get_serp()
+        self.assertEqual(serp['sn'], [])
+        self.assertEqual(serp['pc'], 0)
 
-    def test_blocked(self):
-        pass
+    def test3(self):
+        html = self.get_data('2021-02-04.html')
+        serp = MailRuParser(html).get_serp()
 
-    def test_not_found(self):
-        pass
+        self.assertEqual(serp['pc'], 24316859)
+        self.assertEqual(len(serp['sn']), 10)
 
+        self.assertEqual(serp['sn'][0]['d'], 'eapteka.ru')
+        self.assertEqual(serp['sn'][0]['p'], 1)
+        self.assertEqual(serp['sn'][0]['t'], u'<b>купить</b> блефарогель <b>1</b>')
+        self.assertEqual(serp['sn'][0]['u'], 'http://eapteka.ru/goods/beauty/kosmetika_po_ukhodu_za_kozhey/kosmetika_dlya_glaz/blefarogel_1_geltek')
+        self.assertEqual(serp['sn'][0]['s'], u'<b>Купить</b> Блефарогель <b>1</b> в интернет-аптеке в Москве, низкие цены и официальная инструкция по применению, честные отзывы покупателей и фармацевтов о Блефарогель <b>1</b>. Только сертифицированные медикаменты...')
+
+        self.assertEqual(serp['sn'][9]['d'], 'alex-argo.ru')
+        self.assertEqual(serp['sn'][9]['p'], 10)
+        self.assertEqual(serp['sn'][9]['t'], u'байкал эм <b>1</b> <b>купить</b>')
+        self.assertEqual(serp['sn'][9]['u'], 'http://alex-argo.ru/catalog/bioudobrenie-baykal-em-1-kupit.html')
+        self.assertEqual(serp['sn'][9]['s'], None)
+
+    def test4(self):
+        html = self.get_data('captcha.html')
+        captcha = MailRuParser(html).get_captcha_data()
+
+        self.assertEqual(captcha['url'], 'http://go.mail.ru/ar_captcha?id=03f3380b2a979e6c')
+        self.assertEqual(captcha['back'], u'https://go.mail.ru/search?q=test')
+        self.assertEqual(captcha['q'], u'test')
+        self.assertEqual(captcha['ajax'], u'1')
+        self.assertEqual(captcha['sqid'], u'03f3380b2a979e6c')
+        self.assertEqual(captcha['errback'], u'https://go.mail.ru/search?q=test&amp;frm=captcha_error')
+        self.assertEqual(captcha['SequreWord'], None)
 
 
 if __name__ == '__main__':
