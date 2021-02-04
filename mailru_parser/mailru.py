@@ -53,7 +53,7 @@ class MailRuParser(object):
         return int(match.group(1))
 
     def is_blocked(self):
-        return self.json_data['antirobot']['blocked']
+        return
 
     def _get_captcha_sqid(self):
         match = re.search(
