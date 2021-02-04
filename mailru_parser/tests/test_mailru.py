@@ -79,6 +79,25 @@ class MailRuParserTestCase(MailRuParserTests):
         self.assertEqual(serp['sn'][9]['u'], 'http://ru.all.biz/radiatory-lully-cpk12388961')
         self.assertEqual(serp['sn'][9]['s'], u'<b>Радиаторы</b> <b>lully</b> купить в России по лучшим ценам. Заказывайте <b>Радиаторы</b> <b>Lully</b> прямо сейчас на сайте ru.all.biz')
 
+    def test7(self):
+        html = self.get_data('2021-02-04-2.html')
+        serp = MailRuParser(html).get_serp()
+
+        self.assertEqual(serp['pc'], 3513186)
+        self.assertEqual(len(serp['sn']), 10)
+
+        self.assertEqual(serp['sn'][0]['d'], 'xn--l1aafaekj4h.xn--p1ai')
+        self.assertEqual(serp['sn'][0]['p'], 1)
+        self.assertEqual(serp['sn'][0]['t'], u'<b>Купить</b> <b>мясо</b> <b>говядины</b> оптом в <b>Москве</b>')
+        self.assertEqual(serp['sn'][0]['u'], u'http://xn--l1aafaekj4h.xn--p1ai/%D0%B3%D0%BE%D0%B2%D1%8F%D0%B4%D0%B8%D0%BD%D0%B0-%D0%BE%D0%BF%D1%82%D0%BE%D0%BC-%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C')
+        self.assertEqual(serp['sn'][0]['s'], u'<b>Купить</b> <b>мясо</b> <b>говядины</b> оптом от 10 тонн в <b>Москве</b>. Поставки <b>говядины</b> по всей России. Мы занимаемся крупными поствками <b>мяса</b> от 10 тонн.')
+
+        self.assertEqual(serp['sn'][9]['d'], 'moskva.meatinfo.ru')
+        self.assertEqual(serp['sn'][9]['p'], 10)
+        self.assertEqual(serp['sn'][9]['t'], u'<b>Купить</b> <b>говядину</b> <b>в</b> <b>Москве</b>')
+        self.assertEqual(serp['sn'][9]['u'], u'http://moskva.meatinfo.ru/kupit\'_govyadinu')
+        self.assertEqual(serp['sn'][9]['s'], u'<b>Купить</b> <b>говядину</b> <b>в</b> <b>Москве</b> - крупнейшая доска объявлений для специалистов рынка <b>мяса</b> и мясопродуктов.')
+
 
 if __name__ == '__main__':
     unittest.main()

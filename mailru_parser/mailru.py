@@ -123,7 +123,7 @@ class MailRuParser(object):
         snippets = []
         position = 0
         for element in elements:
-            html = etree.tostring(element)
+            html = HTMLParser.HTMLParser().unescape(etree.tostring(element))
             snippet = self._parse_snippet(html)
             position += 1
             snippet['p'] = position
@@ -132,14 +132,14 @@ class MailRuParser(object):
 
     def _get_url_title(self, html):
         match = re.search(
-            '<h3 class="result__title">.*?<a\s*class="light-link"[^>]+?,\s+\'([^\']+?)\',\s+[^>]+?>\s*(.*?)\s*</a>\s*</h3>',
+            '<h3 class="result__title">.*?<a\s*class="light-link"[^>]+?,\s+\'(.*?)\',\s+[^>]+?>\s*(.*?)\s*</a>\s*</h3>',
             html,
             flags=self.params_regexr
         )
         if not match:
             raise MailRuParserError('not found url and title')
 
-        return match.group(1), HTMLParser.HTMLParser().unescape(match.group(2))
+        return match.group(1), match.group(2)
 
     def _get_descr(self, html):
         if 's' not in self.snippet_fileds:
