@@ -41,7 +41,7 @@ class MailRuParser(object):
         snippets = self.get_snippets()
 
         if not snippets:
-            raise EmptySerp()
+            raise MailRuParserError('Not found snippets')
 
         return {'pc': pagecount, 'sn': snippets}
 
