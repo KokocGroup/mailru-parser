@@ -188,7 +188,6 @@ class MailRuParser(object):
         if not match:
             raise MailRuParserError('json not found')
 
-        print(match.group(1))
         self._json_data = json.loads(match.group(1))
         return self._json_data
 
