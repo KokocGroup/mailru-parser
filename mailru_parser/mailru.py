@@ -34,6 +34,9 @@ class MailRuParser(object):
         self._json_data = None
 
     def get_serp(self):
+        if self._get_not_found():
+            return {'pc': 0, 'sn': []}
+
         pagecount = self.get_pagecount()
         if pagecount == 0:
             return {'pc': 0, 'sn': []}
@@ -44,6 +47,14 @@ class MailRuParser(object):
             raise MailRuParserError('Not found snippets')
 
         return {'pc': pagecount, 'sn': snippets}
+
+    def _get_not_found(self):
+        match = re.search(
+            ur'<h2 class="not-found__title">\s*По данному запросу ничего не найдено\s*</h2>',
+            self.content,
+            flags=self.params_regexr
+        )
+        return bool(match)
 
     def get_pagecount(self):
         match = re.search('foundCount:\s*(\d+),', self.content, flags=self.params_regexr)

@@ -98,6 +98,13 @@ class MailRuParserTestCase(MailRuParserTests):
         self.assertEqual(serp['sn'][9]['u'], u'http://moskva.meatinfo.ru/kupit\'_govyadinu')
         self.assertEqual(serp['sn'][9]['s'], u'<b>Купить</b> <b>говядину</b> <b>в</b> <b>Москве</b> - крупнейшая доска объявлений для специалистов рынка <b>мяса</b> и мясопродуктов.')
 
+    def test8(self):
+        html = self.get_data('2021-02-05.html')
+        serp = MailRuParser(html).get_serp()
+
+        self.assertEqual(serp['pc'], 0)
+        self.assertEqual(len(serp['sn']), 0)
+
 
 if __name__ == '__main__':
     unittest.main()

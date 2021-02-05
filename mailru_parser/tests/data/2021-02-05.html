@@ -1,0 +1,1189 @@
+
+
+
+
+
+    <!DOCTYPE html>
+
+
+
+<!--[if IE 6]>		<html id="section-web" class="nojs ie6 ieb7 ieb8 ieb9 ieb10 split2 platform-not-PC platform-notouch"><![endif]-->
+<!--[if IE 7]>		<html id="section-web" class="nojs iea6 ie7 ieb8 ieb9 ieb10 split2 platform-not-PC platform-notouch"><![endif]-->
+<!--[if IE 8]>		<html id="section-web" class="nojs iea6 iea7 ie8 ieb9 ieb10 split2 platform-not-PC platform-notouch"><![endif]-->
+<!--[if IE 9]>		<html id="section-web" class="nojs iea6 iea7 iea8 ie9 ieb10 split2 platform-not-PC platform-notouch"><![endif]-->
+<!--[if !IE]>-->    <html id="section-web" class="nojs split2 platform-not-PC platform-notouch"><!--<![endif]-->
+
+    <head>
+
+        
+    <meta charset="utf-8">
+<meta content="Content-Type" http-equiv="text/html; charset=utf-8">
+<meta name="referrer" content="origin">
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+
+    
+
+    
+      
+    
+
+
+
+
+
+	<meta property="og:title" content="&#34;сидсмейл&#34; на Поиск Mail.Ru" />
+
+
+
+<meta property="og:url" content="https://go.mail.ru/search?sf=10&amp;q=%D1%81%D0%B8%D0%B4%D1%81%D0%BC%D0%B5%D0%B9%D0%BB&amp;frm=share" />
+<meta property="og:description" content="Поиск Mail.ru — российская поисковая система. Находите сайты в Интернете, видео, картинки, людей и свежие записи в соцсетях." />
+<meta property="og:type" content="website" />
+
+
+
+
+<link rel="SHORTCUT ICON" href="/static/common/img/favicon.ico">
+
+    <meta name="title" content="Поиск по видео - Поиск Mail.Ru" />
+    
+        <meta name="keywords" content="Поиск по видео, поиск клипов, поиск сериалов, поиск фильмов, поиск трейлеров, найти фильм, найти видео, найти клип, найти сериал, найти фильм." />
+        <meta name="description" content="Поиск Mail.Ru. Поиск видео, клипов, сериалов, фильмов и трейлеров в Интернете." />
+    
+    <link rel="search" href="/opensearch.xml" title="Поиск Mail.Ru" type="application/opensearchdescription+xml">
+<!-- Radar Start -->
+
+
+<script type="text/javascript">//<![CDATA[
+var rT = { //renderTime
+	i: [],
+	t: {},
+	ims: [],
+	prj: "gomail",
+	base: "//{prj}.radar.imgsmail.ru/update",
+	params: ["p", "t", "v", "i", "r"],
+	radar_type: "",
+	show_result: typeof show_result !== "undefined",
+	now: Date.now || function () {
+		return new Date().getTime();
+	},
+	addHandler: window.addEventListener ? function(object, event, handler) {
+		object.addEventListener(event, handler, false);
+	} : window.attachEvent ? function(object, event, handler) {
+		object.attachEvent("on" + event, handler);
+	} : function(){},
+	get: function (bP) {
+		return rT.t[bP];
+	},
+	point: function (n, v) {
+		rT.i.push({
+			t: n,
+			delta: parseInt(v, 10) || 0
+		});
+	},
+	profile: function (bP) {
+		var	t = rT.t,
+			c = t[bP],
+			time = rT.now();
+		if (!c || c.stop) {
+			c && c.stop && rT.clear(bP);
+			c = t[bP] = {
+				t: bP,
+				start: time
+			};
+		} else {
+			var	delta = time - c.start;
+			c.stop = time;
+			c.delta = delta;
+			rT.point(bP, delta);
+		}
+		return time;
+	},
+	iclear: function (bP) {
+		for (var l = rT.i.length; l--;) {
+			if (rT.i[l].t === bP) {
+				rT.i.splice(l, 1);
+			}
+		}
+	},
+	clear: function (bP) {
+		rT.iclear(bP);
+		delete rT.t[bP];
+	},
+	notify: function (data) {
+		if (data) {
+			var	image = new Image,
+				base = rT.base.replace(/\{prj\}/g, data.prj ? data.prj : rT.prj),
+				url = data,
+				nd = /[^\d]/;
+			base += (base.indexOf("?") == -1 ? "?" : "&") + "rnd=" + (Math.round(Math.random() * rT.now()) + 1000) + "&";
+			if (typeof data === "object") {
+				url = [];
+				for (var k, v, n = 0, t; k = rT.params[n++];) {
+					v = data[k];
+					if (k === "t" && v == null) {
+						v = rT.radar_type;
+					} else if (k === "v" && typeof v === "string" && nd.test(v)) {
+						v = (t = rT.get(v)) && t.stop ? t.delta : null;
+					}
+					if (v != null && v !== "") {
+						url[url.length] = k + "=" + escape(v);
+					}
+				}
+				url = url.join("&");
+			}
+			
+			image.src = base + url;
+			rT.ims[rT.ims.length] = image;
+		}
+		
+		if (rT.i.length) {
+			for (var i = [], l = rT.i.length; l--;) {
+				i.push(rT.i[l].t + ":" + rT.i[l].delta);
+			}
+			rT.i.length = 0;
+			rT.notify({
+				p: rT.prj + "3",
+				i: i.join(","),
+				v: 0
+			});
+		}
+	}
+};
+
+
+if (window.name.indexOf("srvt") != -1) {
+	rT.srvt = rT.now() - parseInt(window.name.substr(5));
+	window.name = "";
+}
+
+rT.addHandler(document, "click", function() {
+	if (!window.name.length || window.name.indexOf("srvt") != -1) {
+		window.name = "srvt=" + rT.now();
+	}
+});
+rT.addHandler(document, "keypress", function() {
+	if (window.name.indexOf("srvt") != -1) {
+		window.name = "";
+	}
+});
+
+rT.notify({
+	p: "gomail0",
+	i: rT.srvt ? "srvt:" + rT.srvt : "",
+	v: 0
+});
+
+// render
+rT.profile("renderdocument");
+
+// load
+rT.profile("loadcomplete");
+rT.addHandler(window, "load", function() {
+	rT.profile("loadcomplete");
+	rT.notify({
+		p: "gomail2",
+		v: "loadcomplete"
+	});
+});
+
+// error
+window.onerror = function(msg, url, line) {
+	if (url && /^(?:[a-z0-9]+:\/\/)(?:[a-z0-9-]+\.)*((?:imgs)?mail\.ru|mailru\.su)(?:\/.*)?$/.test(url)) {
+		rT.point("error");
+		rT.notify();
+	}
+};
+
+//alias rT.profile
+var timeInterval = rT.profile;
+
+
+//domready
+if (typeof jQuery !== 'undefined') {
+    $(function(){
+        if (typeof rT !== "undefined") {
+            rT.profile("renderdocument");
+            if (rT.t["renderdocument"]) {
+                rT.notify({
+                    p: "gomail",
+                    v: "renderdocument",
+                    r: document.referrer
+                });
+            }	
+        }
+    });
+}    
+//]]></script>
+<title>
+    сидсмейл - Поиск Mail.Ru
+</title>
+    
+    
+
+
+<script type="text/javascript">//<![CDATA[
+// [SRCH-24543]
+
+var STP = {
+    query: "сидсмейл",
+    qOrig: "сидсмейл",
+    qswap: "сидсмейл",
+    time: 1612477217000,
+
+
+    detector_select: "LIGHT",
+    detector_result: "LIGHT",
+    detector_touch: false,
+    detector_platform: "linux",
+
+
+
+
+
+
+    qid: "071cc820bf87af94",
+
+
+
+    userType: "19",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tsg:"suggests.go.mail.ru",
+
+
+    section: "web",
+
+
+
+    base_section: "web",
+
+
+
+    foundCount: 1,
+    fountCountF: "1",
+    foundCountOld: 1,
+    foundCountOldF: "1",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    rch: "l",
+
+
+
+    pxt_host: "go.imgsmail.ru",
+
+
+
+
+
+
+
+    num: "10",
+
+
+fake: ""
+};
+//]]></script><script>
+            try {
+                rT.profile("static");
+            } catch (e) {}
+        </script>
+    <link rel="stylesheet" href="//go3.imgsmail.ru/_st/v2/static/light/css/web.892a9d6c.css">
+
+    <script src="//go4.imgsmail.ru/_st/v2/static/light/js/lib.073098b1.js"></script>
+    <script src="//go4.imgsmail.ru/_st/v2/static/light/js/base.ba89ed43.js"></script>
+ 
+    
+    <script  async  src="https://www.google.com/adsense/search/ads.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    (function(g,o){g[o]=g[o]||function(){(g[o]['q']=g[o]['q']||[]).push(
+    arguments)},g[o]['t']=1*new Date})(window,'_googCsa');
+    </script>
+
+
+
+    <script src="//go4.imgsmail.ru/_st/v2/static/light/js/web.e9afd661.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+        var userSplit = parseInt('2', 10);
+        var userSplit10 = parseInt('3', 10);
+        var splitPart = 2 - (userSplit10 % 2);
+        var splitSuffix = userSplit + "_" + splitPart;
+        var adStyleIdsMap = {
+            go_lite_1_1: 9924920942,
+            go_lite_1_2: 2349805421,
+            go_lite_2_1: 8015387668,
+            go_lite_2_2: 2816809295,
+            go_lite_3_1: 9190644689,
+            go_lite_3_2: 7877562386,
+            go_lite_4_1: 1036723118,
+            go_lite_4_2: 2293904333,
+            go_lite_5_1: 5251397780,
+            go_lite_5_2: 2625233174
+        };
+        var styleId = adStyleIdsMap["go_lite_" + splitSuffix] || "";
+        var adPage =  2 ;
+        var stat_id =  990005 ;
+        var pageOptions = {
+            pubId: "partner-mailru-afs", // Убедитесь, что указан верный идентификатор клиента.
+            styleId: styleId,
+            query: "сидсмейл", // Убедитесь, что указан верный запрос.
+            hl:  "ru" ,
+            adsafe: "high",
+            linkTarget : "_blank",
+            personalizedAds: false,
+            channel: stat_id,
+            adPage: adPage
+        };
+        var googleAdPositionTop = "top";
+        var googleAdPositionBottom = "bottom";
+
+        function generateClickTrackUrl(position, page) {
+            var str = '//go.imgsmail.ru/pxt?pxn=google_ad'
+            var params = {
+                position: position,
+                page: page,
+                platform: 'LIGHT',
+                gp: '',
+                gstatid:  stat_id
+            }
+
+            for (var key in params) {
+                if (params[key]) {
+                    str += '&' + key + '=' + params[key];
+                }
+            }
+            
+            str += '&' + window.pxt.getDefaultParams()
+
+            return str
+        };
+
+        var adblockTop = {
+            maxTop: 3,
+            clicktrackUrl: generateClickTrackUrl(googleAdPositionTop, adPage),
+            "container": "google-afs-container-top",
+            adLoadedCallback: function(containerName, adsLoaded) {
+                var container = document.getElementById("google-afs-container-top");
+                window.pxt(
+                        "google_ad_response",
+                        googleAdPositionTop,
+                        container.offsetHeight,
+                        stat_id,
+                        styleId,
+                        adPage
+                    );
+                if (adsLoaded) {
+                    window.pxt(
+                        "google_ad_show",
+                        googleAdPositionTop,
+                        container.offsetHeight,
+                        stat_id,
+                        styleId,
+                        adPage
+                    );
+                }
+            }
+        };
+
+        var adblockBottom = {
+            number: 3,
+            clicktrackUrl: generateClickTrackUrl(googleAdPositionBottom, adPage),
+            "container": "google-afs-container-bottom",
+            adLoadedCallback: function(containerName, adsLoaded) {
+                var container = document.getElementById("google-afs-container-bottom");
+                window.pxt(
+                        "google_ad_response",
+                        googleAdPositionBottom,
+                        container.offsetHeight,
+                        stat_id,
+                        styleId,
+                        adPage
+                    );
+                if (adsLoaded) {
+                    window.pxt(
+                        "google_ad_show",
+                        googleAdPositionBottom,
+                        container.offsetHeight,
+                        stat_id,
+                        styleId,
+                        adPage
+                    );
+                }
+            }
+        };
+        window.pxt(
+            "google_ad_request",
+            googleAdPositionTop, 
+            0,
+            stat_id,
+            styleId,
+            adPage
+        );
+        window.pxt(
+            "google_ad_request",
+            googleAdPositionBottom, 
+            0,
+            stat_id,
+            styleId,
+            adPage
+        );
+        _googCsa('ads', pageOptions, adblockTop, adblockBottom);
+    </script>
+ 
+
+
+        <script>
+            try {
+                rT.profile("static");
+            } catch (e) {}
+        </script>
+        <!--[if lte IE 9]><script>"abbr article aside audio canvas details figcaption figure footer header hgroup mark meter nav output progress section summary time video".replace(/\w+/g,function(n){document.createElement(n)})</script><![endif]-->
+    </head>
+    <body>
+        
+        
+            <div style="position: absolute;  width: 0;  height: 0;  overflow: hidden; visibility: hidden;">
+                </div>
+        
+        <div class="vertical-wrapper">
+            
+
+<script type="text/javascript">//<![CDATA[
+try {
+	rT.profile("renderserp");
+} catch(e){}
+//]]></script>
+
+<div class="cntBlock sys__ajax__counters">
+
+</div>
+<noscript style="position:absolute; top: -100px;">
+    <img src="//go.imgsmail.ru/showpxt?pxn=noscript&amp;_=1612477217&amp;e=071cc820bf87af94&amp;r=%D1%81%D0%B8%D0%B4%D1%81%D0%BC%D0%B5%D0%B9%D0%BB&amp;w=19&amp;h=l&amp;u=https%3A%2F%2Fgo.mail.ru%2Fsearch%3Fq%3D%25D1%2581%25D0%25B8%25D0%25B4%25D1%2581%25D0%25BC%25D0%25B5%25D0%25B9%25D0%25BB%26sf%3D10&amp;bs=web&amp;dp=linux&amp;db=chrome&amp;dbw=41.0&amp;dr=LIGHT&amp;ds=LIGHT" width="1" height="1" alt="" />
+</noscript>
+
+            <div id="goTopBn">
+            </div>
+            <noscript>
+    <div class="noscript-message">
+        <div class="noscript-message__content">
+            <div class="noscript-message__body">
+                <h1 class="noscript-message__heading">В вашем браузере отключен JavaScript</h1>
+                <p class="noscript-message__message">Уважаемый пользователь!<br>
+                    Чтобы вы смогли воспользоваться Поиском, пожалуйста, <a href="//help.mail.ru/mail-help/helpful/java" target="_blank">включите JavaScript</a> в своем браузере.</p>
+            </div>
+        </div>
+    </div>
+</noscript><!-- BEGIN Header -->
+<script>
+try {
+	rT.profile("header");
+} catch (e) {}
+</script>
+
+<div id="go-header" class="go-header">
+	<div class="go-headlinks" id="go-headlinks">
+		<div class="go-headlinks__wrap">
+
+
+<!--noindex-->
+<style>.x-ph{position:relative;z-index:1003;margin:0;padding:0;font:12px/16px HelveticaNeue,Arial,sans-serif;white-space:nowrap;text-align:left;background:#fff;height:28px;*zoom:1}.x-ph .w-x-ph{width:100%;border-collapse:collapse;background:#fff}.x-ph .w-x-ph,.x-ph .w-x-ph__col{padding:0;margin:0;border:0;border-spacing:0;font:12px/16px HelveticaNeue,Arial,sans-serif}.x-ph .w-x-ph__col{height:28px;vertical-align:top;white-space:nowrap}.x-ph .w-x-ph__col_left{width:1%;padding-right:20px;text-align:left}.x-ph .w-x-ph__col_right{text-align:right}.x-ph__menu{position:relative;z-index:1004;display:inline-block;padding-right:2px;font:12px/16px HelveticaNeue,Arial,sans-serif;vertical-align:top}.w-x-ph__menu__placeholder{position:absolute;top:100%;left:50%;width:0;height:0;font:0/0 a}.x-ph__menu__button,.x-ph__menu__button:link,.x-ph__menu__button:visited,.x-ph__menu__button:hover,.x-ph__menu__button:active,.x-ph__menu__button:focus{position:relative;z-index:1005;display:inline-block;width:100%;padding:6px 0 5px;border-right:1px solid #fff;border-left:1px solid #fff;font:12px/16px HelveticaNeue,Arial,sans-serif;text-decoration:none;cursor:pointer;outline:none}.x-ph-ff.x-ph-win .x-ph__menu__button,.x-ph-ff.x-ph-win .x-ph__menu__button:link,.x-ph-ff.x-ph-win .x-ph__menu__button:visited,.x-ph-ff.x-ph-win .x-ph__menu__button:hover,.x-ph-ff.x-ph-win .x-ph__menu__button:active,.x-ph-ff.x-ph-win .x-ph__menu__button:focus{padding-top:5px;padding-bottom:6px;height:17px}.x-ph__menu__button__text,.x-ph__menu_open .x-ph__menu__button:hover .x-ph__menu__button__text{display:inline-block;width:100%;padding:0 14px 0 6px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;color:#005bd1;font-style:normal;text-decoration:none;overflow:hidden;text-overflow:ellipsis;text-align:left;vertical-align:top}.x-ph__menu__button:hover .x-ph__menu__button__text,.x-ph__menu__button:focus .x-ph__menu__button__text,.x-ph__menu__button:active .x-ph__menu__button__text,.x-ph__menu_open .x-ph__menu__button:focus .x-ph__menu__button__text,.x-ph__menu_open .x-ph__menu__button:active .x-ph__menu__button__text{color:#ff9e00}.x-ph__menu__button__icon,.x-ph__menu_open .x-ph__menu__button:hover .x-ph__menu__button__icon{position:absolute;right:5px;top:13px;width:0;height:0;border-width:4px;border-style:solid;border-color:#005bd1 #fff #fff;font:0/0 a}.x-ph__menu__button:hover .x-ph__menu__button__icon,.x-ph__menu__button:focus .x-ph__menu__button__icon,.x-ph__menu__button:active .x-ph__menu__button__icon,.x-ph__menu_open .x-ph__menu__button:focus .x-ph__menu__button__icon,.x-ph__menu_open .x-ph__menu__button:active .x-ph__menu__button__icon{border-color:#ff9e00 #fff #fff}.w-x-ph__menu__button__shadow{position:absolute;z-index:1007;top:0;opacity:0;width:50px;height:0;background:#fff;-webkit-box-shadow:0 4px 15px rgba(0,0,0,.2);-moz-box-shadow:0 4px 15px rgba(0,0,0,.2);box-shadow:0 4px 15px rgba(0,0,0,.2)}.x-ph__link{display:inline-block;padding:6px;margin-right:6px;*padding:5px 6px 7px;*zoom:1;text-decoration:none;white-space:nowrap;outline:none;font:12px/16px HelveticaNeue,Arial,sans-serif}.x-ph__link,a.x-ph__link{color:#005bd1}.x-ph__link:hover,a.x-ph__link:hover{color:#ff9e00;text-decoration:none}.x-ph__link:hover .x-ph__link__text,a.x-ph__link:hover .x-ph__link__text{color:#ff9e00}.x-ph__link_ext,a.x-ph__link_ext,.x-ph__link_ext:hover,a.x-ph__link_ext:hover{text-decoration:none}.x-ph__link__text{text-decoration:none;font-style:normal;cursor:pointer}.x-ph__link__dot{display:inline-block;width:6px;height:6px;margin-left:3px;margin-bottom:1px;background:#ff9e00;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}.x-ph__link_ext .x-ph__link__dot{display:none}.x-ph__link__balloon{display:none;overflow:hidden;margin-bottom:-4px;margin-left:3px;padding:1px 3px;min-width:9px;height:13px;-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px;background-color:#ff9e00;color:#fff;vertical-align:baseline;text-align:center;font-weight:400;font-style:normal;font-size:11px;line-height:13px;cursor:pointer;-webkit-animation-duration:500ms;-moz-animation-duration:500ms;animation-duration:500ms;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;animation-fill-mode:both}.x-ph-ff.x-ph-mac .x-ph__link__balloon,.x-ph-opera .x-ph__link__balloon{line-height:14px}.x-ph__link_ext .x-ph__link__balloon{display:inline-block;*display:inline;*zoom:1}.x-ph-ios .x-ph__link__balloon{margin-bottom:-5px;padding:0 3px 2px}.x-ph__link_first{margin-left:14px}.x-ph__link_last{margin-right:12px}.x-ph__link_ext{padding-right:1px}.x-ph__link_selected{font-weight:700}.x-ph__link_x-sm{display:none}@media screen and (min-width:1150px){.x-ph__link_x-sm{display:inline-block}}.x-ph-ff.x-ph-win .x-ph__link{padding:5px 6px 7px}.x-ph__auth__link_icon{position:relative;overflow:hidden;padding:0 6px!important;width:16px;height:28px;vertical-align:top;text-indent:30px}.x-ph__auth__link_icon,.x-ph__auth__link_icon:hover{color:#fff!important}.x-ph__auth__link_icon:after{position:absolute;top:2px;left:2px;display:block!important}.w-x-ph__link{display:inline-block;vertical-align:top}.x-ph__auth{width:100%}.x-ph__auth,.w-x-ph__auth__col{margin:0;padding:0;border:0;border-spacing:0;font:12px/16px HelveticaNeue,Arial,sans-serif}.w-x-ph__auth__col{vertical-align:top;text-align:right;white-space:nowrap}.w-x-ph__auth__col_left{width:99%}.w-x-ph__auth__col_right{padding-right:2px}.x-ph__auth__user{position:relative;display:block;width:100%;min-width:100px;height:28px;overflow:hidden}.w-x-ph__auth__user_inner{position:absolute;right:0;text-align:left;max-width:100%}.x-ph__auth__user__text{color:#000;display:inline-block;padding:6px 10px 6px 0;_padding:5px 10px 7px 0;font:12px/16px HelveticaNeue,Arial,sans-serif}.x-ph__auth__user__fade{position:absolute;top:0;right:-6px;width:16px;height:28px;overflow:hidden;background:url("https://img.imgsmail.ru/ph/0.64.3/auth/fade2.png") repeat-y 0 0;_display:none}.x-ph__auth__link,.x-ph__auth__link:link,.x-ph__auth__link:visited,.x-ph__auth__link:hover,.x-ph__auth__link:active,.x-ph__auth__link:focus{font:12px/16px HelveticaNeue,Arial,sans-serif}.w-x-ph__auth__dropdown{position:relative;display:block;min-width:100px;width:100%;height:1px;text-align:right}.w-x-ph__auth__dropdown__inner{position:absolute;right:6px;width:100%;min-width:100px;text-align:right}.x-ph__menu_auth{max-width:100%}.x-ph__menu__button_auth,.x-ph__menu__button_auth:link,.x-ph__menu__button_auth:visited,.x-ph__menu__button_auth:hover,.x-ph__menu__button_auth:active,.x-ph__menu__button_auth:focus{max-width:100%}.x-ph__menu__button__text_auth{position:relative}.x-ph__menu__button__text_auth,.x-ph__menu_open .x-ph__menu__button:hover .x-ph__menu__button__text_auth{max-width:560px}.x-ph__menu_auth_unread .x-ph__menu__button__text_auth,.x-ph__menu_auth_unread.x-ph__menu_open .x-ph__menu__button:hover .x-ph__menu__button__text_auth{padding-left:14px}.x-ph__menu__button_auth__unread{display:none;position:absolute;left:4px;top:12px;width:6px;height:6px;background:#ff9e00;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}.x-ph__menu_auth_unread .x-ph__menu__button_auth__unread{display:block}.x-ph__menu_open .x-ph__menu__button .x-ph__menu__button__text,.x-ph__menu_open .x-ph__menu__button:hover .x-ph__menu__button__text,.x-ph__menu_open .x-ph__menu__button:focus .x-ph__menu__button__text,.x-ph__menu_open .x-ph__menu__button:active .x-ph__menu__button__text{color:#333}.x-ph__menu_open .x-ph__menu__button .x-ph__menu__button__icon,.x-ph__menu_open .x-ph__menu__button:hover .x-ph__menu__button__icon,.x-ph__menu_open .x-ph__menu__button:focus .x-ph__menu__button__icon,.x-ph__menu_open .x-ph__menu__button:active .x-ph__menu__button__icon{border-color:#333 #fff #fff}.x-ph__menu__button_auth__unread{background-position:0 -133px}.x-ph__menu__button__text__icon,.x-ph__auth_list__item__info__social{display:inline-block;overflow:hidden;width:16px;height:16px;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;vertical-align:top}.x-ph__menu__button__text__icon:after,.x-ph__auth_list__item__info__social:after{margin:-4px 0 0 -4px}</style>
+<div class="x-ph portal-headline" id="portal-headline"><table class="w-x-ph" cellspacing="0"><tr><td class="w-x-ph__col w-x-ph__col_left"><a href="https://r.mail.ru/n201590436?sz=9&amp;rnd=113910573" rel="nofollow noopener" class="x-ph__link x-ph__link_first">Mail.ru</a><a id="ph_mail" href="https://r.mail.ru/n215025102?sz=9&amp;rnd=113910573" rel="nofollow noopener" class="x-ph__link"><span class="x-ph__link__text" id="PH_dot">Почта</span><i class="x-ph__link__dot"></i><i class="x-ph__link__balloon" id="g_mail_events"></i></a><a id="ph_my" style="" class="x-ph__link" href="https://r.mail.ru/n317070355?sz=9&amp;rnd=113910573" rel="nofollow noopener"><span class="x-ph__link__text">Мой Мир</span><i class="x-ph__link__balloon" id="g_my_events"></i></a><span class="w-x-ph__link" style=""><a class="x-ph__link" href="https://r.mail.ru/n342101649?sz=9&amp;rnd=113910573" rel="nofollow noopener"><span class="x-ph__link__text">Одноклассники</span><i class="x-ph__link__balloon" id="g_ok_events"></i></a><span id="PH_bub:ok" class="x-ph-bub__placeholder"></span></span><a href="https://r.mail.ru/n338358813?sz=9&amp;rnd=113910573" rel="nofollow noopener" style="" class="x-ph__link"><span>ВКонтакте</span><i class="x-ph__link__balloon" id="vk_counter"></i></a><a class="x-ph__link" href="https://r.mail.ru/n215025103?sz=9&amp;rnd=113910573" rel="nofollow noopener" style=""><span class="x-ph__link__text">Игры</span><i class="x-ph__link__balloon" id="g_games_events"></i></a><a href="https://r.mail.ru/n317070357?sz=9&amp;rnd=113910573" rel="nofollow noopener" style="" class="x-ph__link"><span class="x-ph__link__text">Знакомства</span><i class="x-ph__link__balloon" id="g_love_events"></i></a><a href="https://r.mail.ru/n211660444?sz=9&amp;rnd=113910573" rel="nofollow noopener" style="" class="x-ph__link">Новости</a><a href="https://r.mail.ru/n317070358?sz=9&amp;rnd=113910573" rel="nofollow noopener" style="" class="x-ph__link x-ph__link_selected">Поиск</a><a href="https://r.mail.ru/n339450704?sz=9&amp;rnd=113910573" rel="nofollow noopener" style="" class="x-ph__link">Облако</a><a href="https://r.mail.ru/n339042560?sz=9&amp;rnd=113910573" rel="nofollow noopener" style="" class="x-ph__link x-ph__link_x-sm">Combo</a><a id="PH_allProjects" class="x-ph__link" href="https://r.mail.ru/n201590438?sz=9&amp;rnd=113910573" rel="nofollow noopener">Все проекты</a><span class="x-ph__menu" id="PH_projectsMenu" style="display:none;"><i class="w-x-ph__menu__button__shadow w-x-ph__menu__button__shadow_left"></i><i class="w-x-ph__menu__button__shadow w-x-ph__menu__button__shadow_right"></i><a class="x-ph__menu__button" id="PH_projectsMenu_button" href="#" rel="nofollow noopener"><i class="x-ph__menu__button__icon"></i><i class="x-ph__menu__button__text">Все проекты</i></a></span></td><td class="w-x-ph__col w-x-ph__col_right" style=""><div id="PH_authView" style="display:none"><table class="x-ph__auth" cellspacing="0"><tr><td class="w-x-ph__auth__col w-x-ph__auth__col_left"><span id="PH_singleuser" class="x-ph__auth__user"><span class="w-x-ph__auth__user_inner"><span id="PH_user-email_disabled" class="x-ph__auth__user__text"></span><span class="x-ph__auth__user__fade"></span></span></span><div id="PH_miltiuser" style="display:none;" class="w-x-ph__auth__dropdown"><div class="w-x-ph__auth__dropdown__inner"><div class="x-ph__menu x-ph__menu_auth" id="PH_authMenu"><i class="w-x-ph__menu__button__shadow w-x-ph__menu__button__shadow_left"></i><i class="w-x-ph__menu__button__shadow w-x-ph__menu__button__shadow_right"></i><span class="x-ph__menu__button x-ph__menu__button_auth" id="PH_authMenu_button"><i class="x-ph__menu__button_auth__unread" title=""></i><i class="x-ph__menu__button__icon x-ph__menu__button__icon_auth"></i><i class="x-ph__menu__button__text x-ph__menu__button__text_auth" id="PH_user-email"></i></span></div></div></div></td><td class="w-x-ph__auth__col w-x-ph__auth__col_right"><a id="PH_logoutLink" class="x-ph__link x-ph__link_last x-ph__auth__link" href="https://r.mail.ru/cls1074201/auth.mail.ru/cgi-bin/logout?next=1&lang=ru_RU&page=https%3A%2F%2Fgo.mail.ru%2Fsearch%3Fq%3D%25D1%2581%25D0%25B8%25D0%25B4%25D1%2581%25D0%25BC%25D0%25B5%25D0%25B9%25D0%25BB%26sf%3D10" rel="nofollow noopener" title="выход" xname="clb1074201">выход</a></td></tr></table></div><div id="PH_noAuthView" style=""><table class="x-ph__auth" cellspacing="0"><tr><td class="w-x-ph__auth__col w-x-ph__auth__col_right"><a id="PH_regLink" class="x-ph__link x-ph__auth__link" href="https://r.mail.ru/cls534553/r.mail.ru/clb1126011/e.mail.ru/signup?from=navi&lang=ru_RU&amp;rnd=113910573" rel="nofollow noopener">Регистрация</a><a class="x-ph__link x-ph__link_last x-ph__auth__link" href="https://r.mail.ru/cls951827/e.mail.ru/login?lang=ru_RU&page=https%3A%2F%2Fgo.mail.ru%2Fsearch%3Fq%3D%25D1%2581%25D0%25B8%25D0%25B4%25D1%2581%25D0%25BC%25D0%25B5%25D0%25B9%25D0%25BB%26sf%3D10" rel="nofollow noopener" id="PH_authLink" xname="clb951827">Вход</a></td></tr></table></div></td></tr></table></div><div id="PH_innerHTML" style="display:none;"></div><!--[if IE 7]><script>var ____________ie7 = true;</script><![endif]--><!--[if IE 8]><script>var ____________ie8 = true;</script><![endif]--><script>
+			if (!window.__PHS) var __PHS = {};
+
+			(function (s) {
+				const loginOptions = {
+					project: 'go'
+					
+				}
+
+				s.loginOptions = loginOptions;
+				s.exp = {};
+				
+				s.lang = "ru_RU";
+				s.logDetails = true;
+				s.maxAccounts = 20;
+				s.botTimer = 700;
+				s.eid = '';
+				s.id = 534553;
+				s.settingsId = +'37570690';
+				s.siteid = +'';
+				s.sitezone = +'9';
+				s.pv = '2';
+				s.region = 'Москва';
+				s.loginLink = 'https://r.mail.ru/cls951827/e.mail.ru/login?lang=ru_RU&page=https%3A%2F%2Fgo.mail.ru%2Fsearch%3Fq%3D%25D1%2581%25D0%25B8%25D0%25B4%25D1%2581%25D0%25BC%25D0%25B5%25D0%25B9%25D0%25BB%26sf%3D10';
+				s.authFormExtDomainsEnabled = false;
+				s.portalAuthEnabled = true;
+				
+				s.disableGamesCounter = false;
+				s.loginLinkXName = 'clb1126067';
+				s.registerBackUrl = false;
+				s.bizLinks = false;
+				s.enableLoveCounter = true;
+				s.enableOkCounter = true;
+				s.mailEvents = false;
+				s.disableIFCheck = false;
+				s.mailSplashUpdate = false;
+				s.settingsText = false;
+				s.mytrackerid = null;
+				s.settingsPage = false;
+				s.showPassword = false;
+				s.showVK = true;
+				s.isDuplicateCounters = false;
+				s.isDuplicateProjectsCounters = false;
+				s.isShowDot = true;
+				s.xhrEnabledOK = false;
+				s.enableTargetBlank = false;
+				s.loginFromProject = false;
+				s.pauseUpdate = false;
+				s.pauseUpdateTime = 0;
+				s.authGate = true;
+				s.isAuthGateMobileRedirect = false;
+				s.authGateJS = "https://img.imgsmail.ru/ag/2.7.4/authGate.js";
+				s.securitySettingsLink = "https://id.mail.ru/security";
+				s.authGateJSHasVer = true;
+				
+				s.devAuth = /(^|\.)devmail\.ru$/.test(window.location.hostname);
+				if (!s.socialAuth) s.socialAuth = false;s.externalJS = 'https://img.imgsmail.ru/ph/0.64.3/external.min.js';
+				s.jsonpEnabled=+'';
+				s.project='go';
+				s.projectsMenu={"projects": [{"items": [{"title": "Авто","url": "https://r.mail.ru/n268277902?sz=9&rnd=178430903"},{"title": "Бонус","url": "https://r.mail.ru/n306467211?sz=9&rnd=178430903"},{"title": "Гороскопы","url": "https://r.mail.ru/n268277904?sz=9&rnd=178430903"},{"title": "Дети","url": "https://r.mail.ru/n268277905?sz=9&rnd=178430903"},{"title": "Добро","url": "https://r.mail.ru/n268277906?sz=9&rnd=178430903"},{"title": "Дом","url": "https://r.mail.ru/n323567293?sz=9&rnd=178430903"},{"title": "Задачи","url": "https://r.mail.ru/n326348136?sz=9&rnd=178430903"},{"title": "Звонки","url": "https://r.mail.ru/n326348137?sz=9&rnd=178430903"},{"title": "Здоровье","url": "https://r.mail.ru/n268277907?sz=9&rnd=178430903"},{"title": "Календарь","url": "https://r.mail.ru/n268277908?sz=9&rnd=178430903"},{"title": "Кино","url": "https://r.mail.ru/n268277909?sz=9&rnd=178430903"},{"title": "Леди","url": "https://r.mail.ru/n268277910?sz=9&rnd=178430903"},{"title": "Мой Мир","url": "https://r.mail.ru/n323571912?sz=9&rnd=178430903"},{"title": "Облако","url": "https://r.mail.ru/n268277912?sz=9&rnd=178430903"},{"title": "Ответы","url": "https://r.mail.ru/n268277913?sz=9&rnd=178430903"},{"title": "Питомцы","url": "https://r.mail.ru/n271379127?sz=9&rnd=178430903"},{"title": "Погода","url": "https://r.mail.ru/n268277914?sz=9&rnd=178430903"},{"title": "Спорт","url": "https://r.mail.ru/n268277915?sz=9&rnd=178430903"},{"title": "ТВ программа","url": "https://r.mail.ru/n268277916?sz=9&rnd=178430903"},{"title": "Центр оплат","url": "https://r.mail.ru/n323567294?sz=9&rnd=178430903"},{"title": "Штрафы","url": "https://r.mail.ru/n334045257?sz=9&rnd=178430903"},{"title": "Hi-Tech","url": "https://r.mail.ru/n268277919?sz=9&rnd=178430903"}]},{"title": "Для бизнеса","items": [{"title": "Облако для бизнеса","url": "https://r.mail.ru/n283686308?sz=9&rnd=178430903"},{"title": "Облако для рабочих групп","url": "https://r.mail.ru/n268277928?sz=9&rnd=178430903"},{"title": "Почта для бизнеса","url": "https://r.mail.ru/n268277920?sz=9&rnd=178430903"},{"title": "Почта для образования","url": "https://r.mail.ru/n268277921?sz=9&rnd=178430903"},{"title": "Рейтинг сайтов","url": "https://r.mail.ru/n268277923?sz=9&rnd=178430903"},{"title": "Ситимобил для бизнеса","url": "https://r.mail.ru/n334045258?sz=9&rnd=178430903"},{"title": "myTarget","url": "https://r.mail.ru/n268277924?sz=9&rnd=178430903"},{"title": "Myteam","url": "https://r.mail.ru/n309931538?sz=9&rnd=178430903"}]},{"title": "Другие проекты","items": [{"title": "Агент Mail.Ru","url": "https://r.mail.ru/n268277930?sz=9&rnd=178430903", "img": "https://r.mradx.net/pictures/93/70C072.png", "imgWidth": "16", "imgHeight": "16", "img_2x": "https://r.mradx.net/pictures/77/BE8BD6.png"},{"title": "Браузер Atom","url": "https://r.mail.ru/n308499317?sz=9&rnd=178430903", "img": "https://r.mradx.net/pictures/51/C14885.png", "imgWidth": "16", "imgHeight": "16", "img_2x": "https://r.mradx.net/pictures/DC/C4532A.png"},{"title": "Ситимобил","url": "https://r.mail.ru/n334045259?sz=9&rnd=178430903", "img": "https://r.mradx.net/pictures/50/66B617.png", "imgWidth": "16", "imgHeight": "16", "img_2x": "https://r.mradx.net/pictures/84/E079D1.png"},{"title": "ТамТам","url": "https://r.mail.ru/n288450597?sz=9&rnd=178430903", "img": "https://r.mradx.net/pictures/B9/380E74.png", "imgWidth": "16", "imgHeight": "16", "img_2x": "https://r.mradx.net/pictures/A9/AC7A85.png"},{"title": "Все аптеки","url": "https://r.mail.ru/n274162287?sz=9&rnd=178430903", "img": "https://r.mradx.net/pictures/D1/2955CE.png", "imgWidth": "16", "imgHeight": "16", "img_2x": "https://r.mradx.net/pictures/C0/2B3AA1.png"},{"title": "Юла","url": "https://r.mail.ru/n268277932?sz=9&rnd=178430903", "img": "https://r.mradx.net/pictures/33/2CDE9B.png", "imgWidth": "16", "imgHeight": "16", "img_2x": "https://r.mradx.net/pictures/AA/FEE215.png"},{"title": "Combo","url": "https://r.mail.ru/n326348138?sz=9&rnd=178430903", "img": "https://r.mradx.net/pictures/13/DFC1EB.png", "imgWidth": "16", "imgHeight": "16", "img_2x": "https://r.mradx.net/img/89/EC664D.png"},{"title": "Delivery Club","url": "https://r.mail.ru/n268277934?sz=9&rnd=178430903", "img": "https://r.mradx.net/pictures/B3/DA3AFC.png", "imgWidth": "16", "imgHeight": "16", "img_2x": "https://r.mradx.net/pictures/88/E397FC.png"},{"title": "Hi-chef","url": "https://r.mail.ru/n323567295?sz=9&rnd=178430903", "img": "https://r.mradx.net/pictures/A4/7FFE0A.png", "imgWidth": "16", "imgHeight": "16", "img_2x": "https://r.mradx.net/pictures/A5/66133D.png"},{"title": "ICQ New","url": "https://r.mail.ru/n268277935?sz=9&rnd=178430903", "img": "https://r.mradx.net/pictures/E1/12DFA2.png", "imgWidth": "16", "imgHeight": "16", "img_2x": "https://r.mradx.net/pictures/5B/E9A966.png"},{"title": "Worki","url": "https://r.mail.ru/n334045260?sz=9&rnd=178430903", "img": "https://r.mradx.net/pictures/BC/84F83C.png", "imgWidth": "16", "imgHeight": "16", "img_2x": "https://r.mradx.net/pictures/9B/0AED64.png"}]}], "links": [{"title": "Мобильные приложения","url": "https://r.mail.ru/n268277937?sz=9&rnd=178430903", "img": "https://r.mradx.net/img/00/39A623.png", "imgWidth": "16", "imgHeight": "16", "img_2x": "https://r.mradx.net/img/0B/A927FF.png"},{"title": "Список всех проектов","url": "https://r.mail.ru/n268277938?sz=9&rnd=178430903"}]};
+				s.user='';
+			})(window.__PHS);(function(d,m){function Da(a,e){return a.bind.apply(a,P.call(arguments,1))}function ba(a){for(var a=a||{},e=1,c=arguments.length;e<c;e++){var b=arguments[e],d;for(d in b)b.hasOwnProperty(d)&&(a[d]=b[d])}return a}function Ea(a,e){for(var b in e)Object.prototype.hasOwnProperty.call(e,b)&&!Object.prototype.hasOwnProperty.call(a,b)&&(a[b]=e[b]);return a}function ca(a){return document.getElementById(a)}function Fa(a,e,b,f){var d="",g=[],j=0;if("string"===typeof a)g.push([a,e]),j+=e,"object"==typeof b&&
+(f=b,b=H);else{for(var k in a)a.hasOwnProperty(k)&&(g.push([k,a[k]]),j+=a[k]);"string"==typeof e?(f=b,b=e):"object"==typeof e&&(f=e,b=H)}void 0===b&&(b=H);a=0;for(e=g.length;a<e;a++)g[a]=g[a].join(":");"object"==typeof f&&("string"==typeof f.rlog&&f.rlog.length&&Array.isArray(f.rlog_message)&&f.rlog_message.length)&&(d="&rlog="+f.rlog+"&rlog_message="+f.rlog_message.join(",")+(f.email?"&email="+f.email:""));(new Image).src="//stat.radar.imgsmail.ru/update?p=headline&t="+b+"&v="+j+"&i="+g.join(",")+
+(document.referrer?"&r="+escape(document.referrer):"")+d+"&rnd="+Math.random()}function Ga(a,e,b){function f(){a();g||(d=Q(f,e))}var d,g;b&&a();d=Q(f,e);return function(){g=!0;da(d)}}function Ha(a){a.stopPropagation?a.stopPropagation():a.cancelBubble=!0;a.preventDefault?a.preventDefault():a.returnValue=!1}function Ia(a){a.preventDefault?a.preventDefault():a.returnValue=!1}function ea(a,e,b,f){if(e)if(e.addEventListener)e[a?"addEventListener":"removeEventListener"](b,f,!1);else e[a?"attachEvent":"detachEvent"]("on"+
+b,f)}function y(a){return a&&1==a.nodeType}function fa(a){(function(){for(var a,b=arguments,f=b.length;f--;){a=b[f].split(",");for(var i=a.length;i--;){var g=a[i],j=void 0,k=parseInt(1E9*Math.random()),n=void 0;if(j=g.match(/^(?:cl([bn])|([adgin]))(\d+)(?:sz(\d+))?/))j[1]?n="s"+j[1]:"n"==j[2]?n="nc":("i"==j[2]&&(k=null),n=j[2]),n+=j[3]+".gif?",j[4]&&(n+="sz="+j[4]),k&&(n+="&rnd="+k),d.settings.eid&&(n+="&test_id="+d.settings.eid),(new Image).src="//rs.mail.ru/"+n}}})(a)}function Ja(a){ea(1,a,"mousedown",
+function(a){a||(a=window.event);for(a=a.target||a.srcElement;a;)a.getAttribute&&a.getAttribute("xname")&&fa(a.getAttribute("xname")),a=a.parentNode})}function Ka(a,e){var b;b=y(e)?function(a,e){return a==e}:function(a,e){return I(a,e)};for(var f=a.parentNode;f;){if(b(f,e))return f;f=f.parentNode}return!1}function La(a){for(;a.firstChild;)a.removeChild(a.firstChild)}function I(a,e){return y(a)&&J?a.classList.contains(e):!!~(" "+a.className+" ").indexOf(" "+e+" ")}function R(a,e){if(y(a))if(J)for(var e=
+e.split(" "),b=0;b<e.length;b++)a.classList.add(e[b]);else!I(a,e)&&(a.className+=" "+e)}function ga(a,e){y(a)&&(J?a.classList.remove(e):a.className=a.className.replace(RegExp("(^|\\s)"+e+"(\\s|$)","g"),"$1"))}function Ma(a,e){if(!y(a))return J?a.classList.toggle(e):I(a,e)?(ga(a,e),!1):(R(a,e),!0)}function Na(a){if("string"!==typeof a||!a)return null;try{return JSON.parse(a)}catch(e){throw e;}}function Oa(){return!!b.SCookie.getGlobal(ha)}function Pa(a){var e={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"},
+b=[],f;for(f in e)b.push(f);b="["+b.join("")+"]";f=function(a){return e[a]};return"string"===typeof a&&RegExp(b).test(a)?a.replace(RegExp(b,"g"),f):null==a?"":a}function ia(){this._invocations=[];this._context=this._fn=null}function v(){}function S(a){this._node=b.byId(a);this._container=this._node.parentNode}function Qa(a){this._counters=a;for(var e in this._counters)this._counters.hasOwnProperty(e)&&(this._counters[e]=new S(this._counters[e]));this.update=function(a,e){if("string"==typeof a){var b=
+{};b[a]=e;this.update(b)}else for(b in a)a.hasOwnProperty(b)&&(this._counters[b].update(a[b]),this._counters[b]._isAnim=d.activeUser())}}function l(a){l.__all.push(this);this._opts=a;this._open=this._open.bind(this);this._baseClass=a.baseClass;this._rootNode=a.rootNode;this._dropdown=a.dropdown;this._button=a.button;this._openCounter=a.openCounter||null;this._hideTimeout=null;this._orientation=this._opts.orientation;this._openClass=this._baseClass+"_open";this._rightClass=this._openClass+"_right";
+this._leftClass=this._openClass+"_left";this._inited=!!this._dropdown;this._triggerHideOnInit=this._triggerShowOnInit=!1;b.event(1,this._button,"click",this.show.bind(this))}function s(a,e){e=e||{};this._url=a;this._encoding=e.encoding;this._JSONPCallbackParam=e.JSONPCallbackParam||"callback";this._xhrEnabled=!__PHS.jsonpEnabled&&!e.jsonpEnabled;this._processing=!1;this._requestSource=e.requestSource;this._xhr2Supported=!1;try{XMLHttpRequest&&"withCredentials"in new XMLHttpRequest&&(this._xhr2Supported=
+!0)}catch(b){}}function Ra(a){function e(){g!==(g=location.hash.replace(/^#/,"")||null)&&f()}this._userEmail=a.userEmail;this.____user=this._userEmail.innerHTML||void 0;var c="string"==typeof this.____user&&this.____user.length;this._user=d.settings.loginFromProject&&"mail"==b.project&&c?this.____user:null;this._updateByTimeout=a.updateByTimeout;this.updateLastRequest=0;this._noAuthView=a.noAuthView;this._authView=a.authView;this.updateAccountInfo();var f=b.bind(this.updateAccountInfo,this),i=!1;
+if(!this._updateByTimeout)if(window.jsHistory&&window.jsHistory.change)window.jsHistory.change(function(){i&&f();i=!0});else if("onhashchange"in window)b.event(1,window,"hashchange",f);else{var g=location.hash.replace(/^#/,"")||null;b.setIntervalByTimeout(e,50)}}function ja(a,e){var b=document.createElement("script"),f=document.getElementsByTagName("head")[0];"undefined"!==typeof e&&(b.defer="defer",b.async="async");b.type="text/javascript";b.src=a;!("opera"in window)||"complete"===document.readyState?
+f.appendChild(b):window.addEventListener("DOMContentLoaded",function(){f.appendChild(b)},!1)}function t(a){(new Image).src="//stat.radar.imgsmail.ru/update?p=headline&t="+a+"&i="+d.settings.project+":1&v=1&rnd="+Math.random()}if(!d){var b={};m.swaDomain="//portal.mail.ru";m.authDomain="https://auth.mail.ru";/^https?:\/\/[^/]*?\.dev\.mail\.ru($|\/\S*)/i.test(location.href)?(m.swaDomain="//portal.dev.mail.ru",m.authDomain="https://auth.dev.mail.ru"):/^https?:\/\/[^/]*?\.devmail\.ru($|\/\S*)/i.test(location.href)&&
+(m.swaDomain="//portal.devmail.ru",m.authDomain="https://auth.devmail.ru");m.swaTest&&(m.swaDomain="//portal.test.mail.ru",m.authDomain="https://test.auth.mail.ru");window.__PH=d={_:b,experiments:m.exp};delete m.exp;d.settings=m;var P=Array.prototype.slice;void 0===Function.prototype.bind&&(Function.prototype.bind=function(a){var b=P.call(arguments,1),c=this;return function(){return c.apply(a,b.concat(P.call(arguments,0)))}});Array.isArray||(Array.isArray=function(a){return"[object Array]"===Object.prototype.toString.call(a)});
+var H="go",Q=window.setTimeout,da=window.clearTimeout,ka=ca("portal-headline"),T=!1,J="classList"in document.documentElement,Sa=Array.prototype.indexOf?function(a,b){return Array.prototype.indexOf.call(a,b)}:function(a,b){for(var c=0,f=a.length;c<f;c++)if(a[c]==b)return c;return-1},la=window.devicePixelRatio,Ta=void 0!=document.createElement("div").style.backgroundSize&&1<la,ha="s_c",ma={},Ua=function(a){return a.replace(/([A-Z])/g,function(a,b){return"-"+b.toLowerCase()}).replace(/^ms-/,
+"-ms-")},Va=function(a){return a.replace(/([a-z])-([a-z])/g,function(a,b,f){return b+f.toUpperCase()}).replace(/^-/,"")},na=function(a,b){var c=a.charAt(0).toUpperCase()+a.slice(1);a:{var c=(a+" "+Wa.join(c+" ")+c).split(" "),f;b:if(f=c.length,"CSS"in window&&"supports"in window.CSS){for(;f--;)if(window.CSS.supports(Ua(c[f]),b)){f=!0;break b}f=!1}else f=void 0;if(void 0!==f)c=f;else{var d,g;d=c.length;for(f=0;f<d;f++)if(g=c[f],~(""+g).indexOf("-")&&(g=Va(g)),void 0!==Xa[g]){c=!0;break a}c=!1}}return c},
+Wa=["Moz","O","ms","Webkit"],D=[],p=[],Xa=function(){return"function"!==typeof document.createElement?document.createElement(arguments[0]):"svg"===document.documentElement.nodeName.toLowerCase()?document.createElementNS.call(document,"http://www.w3.org/2000/svg",arguments[0]):document.createElement.apply(document,arguments)}("testelem").style,u=navigator.userAgent;-1!=u.indexOf("Firefox")?p.push("ff"):-1!=u.indexOf("Opera")?p.push("opera"):-1!=u.indexOf("Chrome/40")&&p.push("chrome40");if(-1!=u.indexOf("iPad")||
+-1!=u.indexOf("iPhone")||-1!=u.indexOf("iPod"))p.push("ios"),T=!0;-1!=u.indexOf("Mac OS")&&!T?p.push("mac"):-1!=u.indexOf("Windows")?p.push("win"):p.push("not-desk");"ontouchstart"in window?p.push("touch"):p.push("no-touch");D.push({name:"csstransforms",fn:function(){return-1===navigator.userAgent.indexOf("Android 2.")&&na("transform","scale(1)",!0)},options:void 0});var Ya=na("boxShadow","1px 1px",!0);D.push({name:"boxshadow",fn:Ya,options:void 0});var K,z,U,L,V,W;for(W in D)if(D.hasOwnProperty(W)){K=
+[];z=D[W];z.name&&K.push(z.name.toLowerCase());U="function"===typeof z.fn?z.fn():z.fn;for(L=0;L<K.length;L++)V=K[L],ma[V]=U,p.push((U?"":"no-")+V)}R(ka,"x-ph-"+p.join(" x-ph-"));var oa=1*new Date+"",Za=oa.substring(oa.length-2),$a=b,ab=H,bb=/\s*(\S+)\s*/g,cb=!/\[native\s+code\]/i.test(document.getElementsByClass+""),db=/\./g;ba($a,{timers:{},percent:function(a){return Za<a},supports:ma,extend:ba,append:Ea,dpr:la,retina:Ta,project:ab,setTimeout:function(a,b){return Q(a,b)},clearTimeout:function(a){return da(a)},
+rootNode:ka,byId:ca,byClassName:function(a,b,c){var f,d;"string"===typeof a&&(c=b,b=a,a=document);c=c||"";if(!a||null==b)return[];b=b.replace(/\s+/gi,".");"."!=b[0]&&(b="."+b);if("querySelectorAll"in a){c=a.querySelectorAll(c+b);if(cb){f=-1;for(a=[];d=c[++f];)a.push(d);return a}return c}c=a.getElementsByTagName(c||"*");b&&(b=b.replace(db," "),b=RegExp(b.replace(bb,"(?=(^|.*\\s)$1(\\s|$))")));f=-1;for(a=[];d=c[++f];)1===d.nodeType&&(!b||b.test(d.className))&&a.push(d);return a},radar:Fa,bind:Da,setIntervalByTimeout:Ga,
+eventCancel:Ha,eventPreventDefault:Ia,event:ea,isNode:y,emptyNode:La,count:fa,countEl:Ja,hasParent:Ka,hasClass:I,removeClass:ga,addClass:R,toggleClass:Ma,ArrayIndexOf:Sa,parseJson:Na,isCorp:Oa,isCorpCookie:ha,iOs:T,replaceUnsafeSymbols:Pa});var q,M=function(a,b,c){if(void 0!==b){var f,c=c||{};null===b&&(b="",c.expires=-1);b+="";document.cookie=a+"="+b+(c.expires&&(f="number"==typeof c.expires&&(f=new Date),f.setTime(f.getTime()+864E5*c.expires),f||"toUTCString"in c.expires&&c.expires)&&"; expires="+
+f.toUTCString()||"")+(c.path?"; path="+c.path:"")+(c.domain?"; domain="+c.domain:"")+(c.samesite?"; SameSite="+c.samesite:"")+(c.secure?"; secure":"");return b}if(""!==(document.cookie||""))return b=(document.cookie.match(RegExp("(?:^|; ?)"+a+"\\=(\\S*?)(?:; ?|$)"))||[])[1],void 0===b?void 0:b};"function"!=typeof Object.assign&&Object.defineProperty(Object,"assign",{value:function(a,b){var c=arguments;if(null==a)throw new TypeError("Cannot convert undefined or null to object");for(var f=Object(a),
+d=1;d<arguments.length;d++){var g=c[d];if(null!=g)for(var j in g)Object.prototype.hasOwnProperty.call(g,j)&&(f[j]=g[j])}return f},writable:!0,configurable:!0});Array.from||(Array.from=function(a){var b=[];if(!a)return b;switch(a.constructor.name){case "Object":return Array.prototype.slice.call(a);case "Set":return a.forEach(function(a){b.push(a)}),b;case "Map":return a.forEach(function(a,f){b.push([f,a])}),b;default:return[]}});var eb=function(){var a;a=navigator.userAgent;a=!/Version\/.* Safari\//.test(a)||
+/Chrom(e|ium)/.test(a)?!1:(a=a.match(/\(Macintosh;.*Mac OS X (\d+)_(\d+)[_\d]*.*\) AppleWebKit\//))&&"10"===a[1]&&"14"===a[2];a||(a=(a=navigator.userAgent.match(/\(iP.+; CPU .*OS (\d+)[_\d]*.*\) AppleWebKit\//))&&"12"===a[1]);if(a)return"";document.cookie="_s_test=1;path=/;SameSite=None;Secure";return(a=document.cookie.match(RegExp("(?:^|; )"+"_s_test".replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g,"\\$1")+"=([^;]*)")))&&decodeURIComponent(a[1])?(document.cookie="_s_test=1;path=/;max-age=-1;SameSite=None;Secure",
+";SameSite=None;Secure"):""},pa=/(^|\.)devmail\.ru$/.test(window.location.hostname),h={_S_cookie_set_get_remove:function(a,b,c,f){var d,g,j=RegExp("(^|\\|)("+c+"=)(.*?)(\\||$)"),b=Object.assign({domain:b,expires:365,path:"/"},";SameSite=None;Secure"===eb()&&{samesite:"None",secure:!0});if(c){d=M(a)||"";g=(d.match(j)||[])[3];var k=null;void 0!==f?(c=void 0!==g||null===f?k=d.replace(j,null===f?function(a,b,e,c,f,d){return 0===d?"":f}:"$1$2"+f+"$4"):(d?d+"|":"")+c+"="+f,M(a,c,b),""===k&&M(a,null,b)):
+f=g;return f}},_throw_noValue_Error:function(){throw Error("need value");},__prefix:null,__domain:pa?".devmail.ru":".mail.ru",setProject:function(a,b){if(!a||!b)throw Error("project is not valid");"."!==b.substr(0,1)&&(b="."+b);h.__prefix=a;pa&&(b=b.replace(/.[a-z0-9\-]*.[a-z0-9]*$/,".devmail.ru"));h.__domain=b},_getPrefix:function(a){a||(a={});a.prefix=a.prefix||h.__prefix;a.domain=a.domain||h.__domain;if(!a.prefix||!a.domain)throw Error("run setProject before");return a},getGlobal:function(a){return h._S_cookie_set_get_remove("s",
+h.__domain,a)},setGlobal:function(a,b){void 0===b&&h._throw_noValue_Error();h._S_cookie_set_get_remove("s",h.__domain,a,b);return h.getGlobal(a)},removeGlobal:function(a){var b=h.getGlobal(a);h._S_cookie_set_get_remove("s",h.__domain,a,null);return b},getLocal:function(a,b){b=h._getPrefix(b);return h._S_cookie_set_get_remove("s_"+b.prefix,b.domain,a)},setLocal:function(a,b,c){c=h._getPrefix(c);void 0===b&&h._throw_noValue_Error();h._S_cookie_set_get_remove("s_"+c.prefix,c.domain,a,b);return h.getLocal(a,
+c)},removeLocal:function(a,b){var b=h._getPrefix(b),c=h.getLocal(a,b);h._S_cookie_set_get_remove("s_"+b.prefix,b.domain,a,null);return c}};q=b.SCookie=h;ia.prototype={getQuery:function(){var a=this.invoke.bind(this);a.replace=this.replace.bind(this);return a},invoke:function(){this._fn?this._fn.apply(this._context,arguments):this._invocations.push(arguments)},replace:function(a,b){if(!this._fn){for(var b=b||window,c=0,f=this._invocations.length;c<f;c++)a.apply(b,this._invocations[c]);delete this._invocations;
+this._fn=a;this._context=b}}};b.extend(b,{DeferredQuery:ia});v.prototype={emit:function(a,b,c){function f(){--g||c&&c()}void 0==b&&(b={});var d=this.listeners(a);if(d)for(var d=d.slice(),a=new v.Event(a,b),g=d.length,b=0,j=g;b<j;b++){var k=d[b];if("function"===typeof k)try{k.call(this,a,f)}catch(h){f()}}else c&&c()},listeners:function(a){return this._events&&this._events[a]&&this._events[a].length&&this._events[a]},addListener:function(a,b){if("function"!==typeof b)throw Error("invalid argument");
+this._events||(this._events={});this._events[a]||(this._events[a]=[]);this._events[a].push(b);this.emit("newlistener",{type:a});return this},once:function(a,b){function c(){this.removeListener(a,c);b.apply(this,arguments)}if("function"!==typeof b)throw Error("invalid argument");this.on(a,c);return this},removeListener:function(a,e){if("function"!==typeof e)throw Error("invalid argument");if(!this._events[a])return this;var c=this._events[a],f=b.ArrayIndexOf(c,e);if(0>f)return this;c.splice(f,1);0===
+c.length&&delete this._events[a];return this}};v.prototype.on=v.prototype.addListener;v.Event=function(a,b){this.type=a;this.data=b};v.relay=function(a,b,c){for(var f=0,d=a.length;f<d;f++){var g=a[f];b.on(g,function(a){return function(){c.emit(a)}}(g))}};b.EventEmitter=v;var A=function(){var a=q.getGlobal(qa),b;if(!a)return E(0,0,{id:0,current:0}),{id:0,current:0};b=parseInt(a.substr(0,3),16);a=parseInt(a.substr(3,6),16);return{id:b,current:a}},E=function(a,b,c){(c=c||A())||(c={});void 0!==a&&(c.id=
+a);c.id=void 0!=c.id&&c.id.toString(16);switch(c.id.length){case 1:c.id="00"+c.id;break;case 2:c.id="0"+c.id}void 0!==b&&(c.current=b);c.current=void 0!=c.current&&c.current.toString(16);switch(c.current.length){case 1:c.current="00"+c.current;break;case 2:c.current="0"+c.current}q.setGlobal(qa,c.id+c.current)},G=function(a,e){function c(a){N!==a&&(N=a,d.emit("visibilitychange",{hidden:a,visible:!a}))}var f;if(e)f=e.hidden,c(f);else if(f="focus"==a.type||"focusin"==a.type?!1:"blur"==a.type||"focusout"==
+a.type?!0:!!document[F],"focusout"==a.type)r=b.setTimeout(function(){r=void 0;c(f)},0);else if("focusin"==a.type)void 0!==r?b.clearTimeout(r):c(f),r=void 0;else if((ra||sa)&&!B)if(f)r=b.setTimeout(function(){r=void 0;try{A().current===w||c(f)}catch(a){b.radar("cookieError",1)}},200);else{try{A().current!==w&&(E(void 0,w),c(f))}catch(i){b.radar("cookieError",1)}b.clearTimeout(r);r=void 0}else c(f)},F,r,N=!1,B,X={hidden:"visibilitychange",mozHidden:"mozvisibilitychange",webkitHidden:"webkitvisibilitychange",
+msHidden:"msvisibilitychange",oHidden:"ovisibilitychange"};for(F in X)if(X.hasOwnProperty(F)&&F in document){B=X[F];break}var C=navigator.userAgent,ta=-1<C.indexOf("iPad")||-1<C.indexOf("iPhone")||-1<C.indexOf("iPod"),ra=!B&&-1<C.indexOf("Opera"),sa=0<C.indexOf("Safari")&&-1===C.indexOf("Chrome"),fb=(ra||ta||sa)&&!B,qa="t";try{if(fb){var w,O=A();O.id++;var Y=O.id;4095<Y&&(Y=0);E(Y);O=A();w=O.id;E(void 0,w)}}catch(jb){b.radar("cookieError",1)}if(B)b.event(1,document,B,G);else if(ta){var ua=new Date,
+va=function(){b.clearTimeout(50);b.setTimeout(va,50);var a=new Date;100<a.getTime()-ua.getTime()&&A().current!==w&&(E(void 0,w),N=!1,G({},{hidden:!0}),N=!0,G({},{hidden:!1}));ua=a};b.setTimeout(va,50)}else b.event(1,window,"focus",G),b.event(1,window,"blur",G);S.prototype={visibleClass:"x-ph__link_ext",show:function(){b.addClass(this._container,this.visibleClass);b.clearTimeout(this._animTimeout);b.clearTimeout(this._animResetTimeout);this._anim&&this._isAnim&&(this._animTimeout=b.setTimeout(function(){b.addClass(this._node,
+"x-ph-animated_flash");this._animResetTimeout=b.setTimeout(function(){b.removeClass(this._node,"x-ph-animated_flash")}.bind(this),1E3)}.bind(this),100))},hide:function(){b.removeClass(this._container,this.visibleClass)},value:function(a){void 0!==a&&(this._node.innerHTML=this.prepare(a));return parseInt(this._node.innerHTML,10)||void 0},prepare:function(a){a=parseInt(a);return 0<a?a:0},update:function(a){var e=this.value();b.clearTimeout(this._updateTimeout);this._updateTimeout=b.setTimeout(function(){a=
+this.value(a);if(void 0!==e&&a>e||d.activeUser()!=this._isAnim)this._anim=!0;this[a?"show":"hide"]();this._anim=!1}.bind(this),100)}};b.Counters=Qa;b.Counter=S;l.__all=[];l.resetShowOnInit=function(a){for(var b=0,c=l.__all.length;b<c;b++){var f=l.__all[b];if(!a||f!==a)f._triggerShowOnInit=!1,f._triggerHideOnInit=!1}};l.hideAll=function(){for(var a=0,b=l.__all.length;a<b;a++){var c=l.__all[a];c._triggerShowOnInit=!1;c._triggerHideOnInit=!1;c.hide()}};b.extend(l.prototype,b.EventEmitter.prototype,{init:function(a){!this._dropdown&&
+a&&(this._dropdown=a,this._rootNode.appendChild(a),this._inited=!0,this._triggerShowOnInit&&this.show(),this._triggerHideOnInit&&this.hide(),this._triggerHideOnInit=this._triggerShowOnInit=!1)},_mouseIn:function(){b.clearTimeout(this._hideTimeout)},_mouseOut:function(){b.clearTimeout(this._hideTimeout);this._hideTimeout=b.setTimeout(this.hide.bind(this),4E3)},isVisible:function(){return b.hasClass(this._rootNode,this._openClass)},show:function(a){b.clearTimeout(this._hideTimeout);a&&b.eventPreventDefault(a);
+this._inited?this.isVisible()||this.emit("show",{},function(){this.__toggle(!0)}.bind(this)):(this._triggerShowOnInit=!0,l.resetShowOnInit(this))},hide:function(){this._inited?this.isVisible()&&this.emit("hide",{},function(){this.__toggle(!1)}.bind(this)):this._triggerShowOnInit=!this._triggerShowOnInit},_hideOther:function(){for(var a=0,b=l.__all.length;a<b;a++){var c=l.__all[a];c!=this&&c.isVisible()&&c.hide();c._triggerShowOnInit=!1}},_click:function(a){var e=a.target||a.srcElement;e==this._dropdown||
+b.hasParent(e,this._dropdown)?this.emit("click",{clickEvent:a},b.bind(this.hide,this)):"click"==a.type&&(b.hasParent(e,this._rootNode)&&b.eventPreventDefault(a),this.hide())},_open:function(){b.clearTimeout(this._openTimeout);this._openTimeout=b.setTimeout(function(){if(this._orientation)b.addClass(this._rootNode,this._openClass),b.addClass(this._rootNode,this["_"+this._orientation+"Class"]);else{var a=this._dropdown.clientWidth,e=this._rootNode.offsetLeft,c=a+(this._rootNode.offsetParent==b.rootNode?
+e:1E4),f=document.body.offsetWidth;b.addClass(this._rootNode,this._openClass);b.removeClass(this._rootNode,c<=f?this._rightClass:this._leftClass);b.addClass(this._rootNode,c>f?this._rightClass:this._leftClass);this._dropdown.style.right=e+this._rootNode.clientWidth<a&&c>f?-(a-(e+this._rootNode.clientWidth)+10)+"px":""}a=function(){if(window.URL||window.webkitURL)this._dropdown.style.width=this._dropdown.clientWidth+1+"px",this._dropdown.style.width=null}.bind(this);a();b.setTimeout(a,0)}.bind(this),
+0)},__toggle:function(a){b.clearTimeout(this.__eventsTimeout);this.__eventsTimeout=b.setTimeout(function(){b.event(a,document,"click",this.__click||(this.__click=this._click.bind(this)));b.event(a,this._rootNode,"mouseout",this.__mouseOut||(this.__mouseOut=this._mouseOut.bind(this)));b.event(a,this._rootNode,"mouseover",this.__mouseIn||(this.__mouseIn=this._mouseIn.bind(this)))}.bind(this),10);a?(this._openCounter&&b.count(this._openCounter),"block"!==this._dropdown.style.display&&(this._dropdown.style.display=
+"block"),this._open(),b.event(1,window,"resize",this._open)):(b.removeClass(this._rootNode,this._openClass),b.removeClass(this._rootNode,this._leftClass),b.removeClass(this._rootNode,this._rightClass),b.event(0,window,"resize",this._open))}});b.Menu=l;var wa=document.getElementsByTagName("head")[0];s.prototype={get:function(a){a=b.extend({encoding:this._encoding,params:{},complete:function(){}},a);this.cancel();return this[this._isXHR2()?"_getXHR":"_getScript"](this._url,a)},_isXHR2:function(){return this._xhrEnabled&&
+this._xhr2Supported},_getUrl:function(a,b){var c=!!~a.indexOf("?");b.rnd=(new Date).getTime();for(var f in b)if(b.hasOwnProperty(f)){var d=b[f];"function"==typeof d&&(d=d(b));void 0!==d&&(a+=(c?"&":"?")+f+"="+encodeURIComponent(d),c=!0)}return a},_getXHR:function(a,e){var c=new XMLHttpRequest;this._processing=!0;b.clearTimeout(this._xhrTimeout);e.timeout&&(this._xhrTimeout=b.setTimeout(function(){this._processing&&(b.clearTimeout(this._xhrTimeout),this._processing=!1,this.cancel(),e.complete({status:"error",
+errorType:"timeout"}))}.bind(this),e.timeout));c.onreadystatechange=function(){if(this._processing){var a;if(4===c.readyState){b.clearTimeout(this._xhrTimeout);this._processing=!1;var d;if(200==c.status){try{d=b.parseJson(c.responseText)}catch(g){a=!!g}if("object"!==typeof d||!d)a=!0}!a&&200==c.status?(a=d,a.error&&!a.errorType&&(a.errorType="serverError")):a=a?{status:"error",errorType:"parseError"}:200!=c.status?{status:"error",errorType:"netError"}:{status:"error"};this._requestSource&&(a.requestSource=
+this._requestSource);e.complete(a)}}}.bind(this);c.open("get",this._getUrl(a,e.params),!0);c.withCredentials=!0;c.send(null);this._xhr=c},_getScript:function(a,e){function c(){wa.appendChild(i);b.setTimeout(function(){wa.removeChild(i)},6E4)}var d=this._cbName="__PHJSONPCallback_"+s.getUuid(),i=document.createElement("script"),g,j=e.timeout;e.params[this._JSONPCallbackParam]=d;a=this._getUrl(a,e.params);window[d]=function(a){b.clearTimeout(g);window[d]=s.__PHEmptyCallback;this._cbName=null;this._processing=
+!1;this._requestSource&&(a.requestSource=this._requestSource);a.error&&!a.errorType&&(a.errorType="serverError");"cancel"!=a.status&&e.complete(a)}.bind(this);i.defer="defer";i.async="async";i.type="text/javascript";e.encoding&&(i.charset=e.encoding);i.src=a;!("opera"in window)||"complete"===document.readyState?(this._processing=!0,c()):window.addEventListener("DOMContentLoaded",b.bind(function(){this._processing=!0;c()},this),!1);j&&(g=b.setTimeout(b.bind(function(){window[this._cbName]({status:"error",
+errorType:"timeout"})},this),j))},isProcessing:function(){return this._processing},cancel:function(){this._isXHR2()?this._cancelXHR():this._cancelScript()},_cancelXHR:function(){this._xhr&&this._xhr.abort()},_cancelScript:function(){this._cbName&&window[this._cbName]&&window[this._cbName]({status:"cancel"})}};s.__uuid=0;s.getUuid=function(){return s.__uuid++};s.__PHEmptyCallback=function(){};b.extend(b,{Transport:s});b.AccountManager=Ra;b.extend(b.AccountManager.prototype,b.EventEmitter.prototype,
+{activeUser:function(){return this._user},updateLogin:function(a,b){this._user=a;this._userEmail.innerHTML=this.drawName(a,b);a?(this._noAuthView.style.display="none",this._authView.style.display=""):(this._authView.style.display="none",this._noAuthView.style.display="")},isCorp:b.isCorp,isCorpCookie:b.isCorpCookie,setCorp:function(a){for(var e=0,c=a.length;e<c;e++)if("corp.mail.ru"===a[e].split("@")[1])return b.SCookie.setGlobal(this.isCorpCookie,(new Date).getTime()),!0;if((a=b.SCookie.getGlobal(this.isCorpCookie))&&
+(new Date).getTime()>1*a+864E5)return b.SCookie.removeGlobal(this.isCorpCookie),!1},drawName:function(a,e){var c="";"string"!=typeof e?(this._userEmail.className=d.settings.multiAuthEnabled?"x-ph__menu__button__text x-ph__menu__button__text_auth":"x-ph__auth__user__text",c=a):(b.addClass(this._userEmail,"x-ph-ico x-ph-ico_"+this.getSocialId(a)+"_small"),c="&nbsp;"+e);return c},getSocialId:function(a){a=a.match(/^[0-9]+@(vk|ok|fb)$/);return null==a?void 0:a[1]}});var xa=!1;b.extend(b.AccountManager.prototype,
+{updateCounters:function(a){var e={},a=a||{};if("mail"!=b.project&&!("home"==b.project&&d.settings.mailSplashUpdate)||!xa&&"mail"==b.project&&!d.settings.mailEvents)e.mail=a.mail_cnt||0;xa=!0;e.my=a.my_cnt||0;d.settings.disableGamesCounter||(e.games=a.games_cnt||0);this.updateNotifier(a);b.counters.update(e)},updateNotifier:function(a){var e=b.byId("PH_authMenu"),a=a.mail_notifier?parseInt(a.mail_notifier,10):0;b[(0==a?"remove":"add")+"Class"](e,"x-ph__menu_auth_unread")},_sendError:function(a){var e=
+{updateError:1},c=d.settings.logDetails?{rlog:"navidata_errors",email:d.activeUser(),rlog_message:[]}:null;a.errorType&&(e["updateError_"+a.errorType]=1,c&&c.rlog_message.push(a.errorType));a.requestSource&&(e["updateError_"+a.requestSource]=1,c&&c.rlog_message.push(a.requestSource),a.errorType&&(e["updateError_"+a.errorType+"_"+a.requestSource]=1,c&&c.rlog_message.push(a.errorType)));c?b.radar(e,c):b.radar(e);this.emit("updateError")},_PHUpdater:function(a,e,c){function f(a){"ok"!=b.project&&d.settings.portalAuthEnabled&&
+this.updateLogin(k,m);this.updateCounters(g);"function"===typeof a&&a()}var i=a.status,e=e||function(){};if("error"==i)this._sendError(a),e();else{var g=a.data,j=g.action,k=g.email,h=g.requestedLogin,l=b.bind(f,this),m="undefined"!==typeof g.soc_name?b.replaceUnsafeSymbols(g.soc_name):void 0;this.setCorp(g.list||[]);d.settings.portalAuthEnabled?"switch"==j?"disabled"==i?c?(b.radar({disabledUser:1,disabledUserRestore:1}),e()):(this.emit("disabledUser"),d.emit("disabledUser",a.data,function(){b.radar({disabledUser:1,
+disabledUserSendToLogin:1});window.location="https://e.mail.ru/login?fail=1&d1&page="+encodeURIComponent(location.href)+"&email="+encodeURIComponent(k)})):"ok"==i&&k!=this.activeUser()?(this.emit("authChange"),(new Image).src="//r3.mail.ru/k?auth=1&rnd="+Math.random(),d.listeners("authChange")?(b.radar("authChange",1),!k||void 0!==g.mail_cnt?d.emit("authChange",a.data,function(){l(e)}):this.loadAccountInfo(b.bind(function(a){"error"==a.status?(this._sendError(a),e()):(g=b.extend(a.data,g),d.emit("authChange",
+g,function(){l(e)}))},this),k)):c?(b.radar("authChangeReloadDis",1),!k||void 0!==g.mail_cnt?l(e):this.loadAccountInfo(b.bind(function(a){"error"==a.status?(this._sendError(a),e()):(g=b.extend(a.data,g),l(e))},this),k)):(b.radar("authChangeReload",1),b.setTimeout(function(){location.reload()},10))):"noauth"==i&&k!=this.activeUser()?("home"===b.project&&(i=[],i.push("headlineAuthLost"),i.push("mpop="+(d.cookie("Mpop")?"1":"0")),i.push("activeEmail="+this.activeUser()),i.push("newEmail="+k),(new Image).src=
+"//gstat.imgsmail.ru/gstat?ua=1&logme="+encodeURIComponent(i.join(";"))+"&rnd="+(new Date).getTime()+Math.random()),-1!==g.list.indexOf(h)?__PH.authForm.show({type:"choice",email:h}):(b.radar("authLost",1),this.emit("authLost"),i=function(){a.status="ok";a.data.action="switch";this._PHUpdater(a,e,c)}.bind(this),d.emit("authLost",a.data,i))):(b.radar("authRestore",1),"function"===typeof e&&e()):"list"==j&&("____user"in this&&(this.____user!==k&&"mail"===b.project&&((new Image).src="//gstat.imgsmail.ru/gstat?logme="+
+encodeURIComponent("headlineFail;headlineEmail="+k+";projectEmail="+this.____user)+"&rnd="+(new Date).getTime()+Math.random(),h={userMismatch:1},h["userMismatch_"+(k?"":"no")+"HeadlineUser"]=1,h["userMismatch_"+(this.____user?"":"no")+"ProjectUser"]=1,h["userMismatch_"+(this.____user?"":"no")+"PUser_"+(k?"":"no")+"HUser"]=1,b.radar(h)),delete this.____user),null===this.activeUser()?(d.settings.enableUpdateRadars&&b.radar("update",1),this.emit("update"),d.emit("update",a.data,function(){l(e)})):k==
+this.activeUser()?((h=d.cookie("Mpop"))&&("ok"==i&&this.activeUser()&&-1==h.indexOf(this.activeUser()))&&b.count("d1409289"),d.settings.enableUpdateRadars&&b.radar("update",1),this.emit("update"),d.emit("update",a.data,function(){l(e)})):(a.data.action="switch",this._PHUpdater(a,e,!0))):(d.settings.enableUpdateRadars&&b.radar("update",1),this.emit("update"),d.emit("update",a.data,function(){l(e)}))}}});b.extend(b.AccountManager.prototype,{_authTransport:new b.Transport(d.settings.authDomain+"/cgi-bin/auth?mac=1",
+{JSONPCallbackParam:"JSONP_call",requestSource:"auth"}),switchAccount:function(a,b,c){var d={};if(a){d.Login=a;var i=this.updateResume(b||function(){}),b=function(b){b.data&&(b.data.requestedLogin=a);this._PHUpdater(b,i,c)}.bind(this);this._authTransport.get({params:d,complete:b,timeout:3E4})}},_logoutTransport:new b.Transport(d.settings.authDomain+"/cgi-bin/logout?mac=1",{JSONPCallbackParam:"JSONP_call",requestSource:"logout"}),logoutAccount:function(a,b){var c={};if(a&&a!==this.activeUser())c.Login=
+a;else throw Error("Can not logout. Not active account expected.");this._logoutTransport.get({params:c,complete:b})}});var Z=!1,ya;b.extend(b.AccountManager.prototype,{_accountInfoTransport:new b.Transport(d.settings.swaDomain+"/NaviData?mac=1&gamescnt=1&Socials=1",{JSONPCallbackParam:"JSONP_call",requestSource:"accountInfo"}),loadAccountInfo:function(a,b){var c={};if(b=!d.settings.multiAuthEnabled?void 0:b||this.activeUser())c.Login=b;this._accountInfoTransport.get({params:c,complete:function(b){"function"===
+typeof a&&a(b)},timeout:3E4})},updateAccountInfo:function(a,b){if(!Z){var c=+new Date;if(this._updateByTimeout||!this._updateByTimeout&&this.updateLastRequest<c-this.updateRequestTimeout||b)!this._updateByTimeout&&this.updateLastRequest&&((new Image).src="//rs.mail.ru/d"+"534553".replace("%","")+".gif?"+c),this.updateLastRequest=c,c=function(b){this._PHUpdater(b,a)}.bind(this),c=this.updateResume(c),this.loadAccountInfo(c)}},updateRequestTimeout:6E4,updateReset:function(a){this._updateByTimeout&&(a?
+(a=this.updateRequestTimeout-(new Date).getTime()+this.updateLastRequest,0>a&&(a=0)):a=this.updateRequestTimeout,b.clearTimeout(this._listAccountTimeout),this._listAccountTimeout=b.setTimeout(b.bind(this.updateAccountInfo,this),a))},updateResume:function(a){if(this._updateByTimeout){var e=this._accountInfoTransport.isProcessing();this._accountInfoTransport.cancel();this.updateReset();var c=!1;this.once("authChange",function(a,b){c=!0;"function"===typeof b&&b()})}return b.bind(function(b){this._updateByTimeout&&
+(e?c?this.updateReset():this.updateAccountInfo():c?this.updateReset():this.updateReset(!0));"function"==typeof a&&a(b)},this)},pauseUpdate:function(a,b){a?ya=setTimeout(function(){Z=!0},b):(clearTimeout(ya),Z=!1)}});Event.prototype.composedPath||(Event.prototype.composedPath=function(){for(var a=this.target,b=[];null!==a;)b.push(a),a=a.parentNode;return b});b.SCookie[(b.retina?"set":"remove")+"Global"]("rt",1);b.SCookie[(b.retina?"set":"remove")+"Global"]("dpr",b.dpr);d.settings.enableUpdateRadars=
+b.percent(1);d.settings.authFormEnabled=d.settings.multiAuthEnabled=d.settings.portalAuthEnabled;b.rbCounters=d.settings.isDuplicateCounters?{projectMenuOpen:"d61021872"}:{projectMenuOpen:"d535041"};var za=!1,x=navigator.userAgent;if(~x.indexOf("Opera")&&(!~x.indexOf("Opera/9.8")||~x.indexOf("Version/10")||~x.indexOf("Version/11")||~x.indexOf("Opera/10")||~x.indexOf("Opera 10"))||window.____________ie7||~x.indexOf("Firefox/3."))d.settings.multiAuthEnabled=!1,d.settings.authFormEnabled=
+!1,za=!0;b.byId("PH_singleuser").style.display=d.settings.multiAuthEnabled?"none":"block";b.byId("PH_miltiuser").style.display=d.settings.multiAuthEnabled?"block":"none";d.settings.projectsMenuEnabled=!1;za||(d.settings.projectsMenuEnabled=!0,b.byId("PH_projectsMenu").style.display="inline-block",b.byId("PH_allProjects").style.display="none",b.projectsMenuOpen=(new b.DeferredQuery).getQuery(),b.event(1,b.byId("PH_projectsMenu_button"),"click",b.projectsMenuOpen));d.settings.bizLinks&&(b.byId("PH_projectsMenu").style.display=
+"none",b.byId("PH_allProjects").style.display="none");b.countEl(b.byId("PH_logoutLink"));b.event(1,b.byId("PH_logoutLink"),"mousedown",function(){b.count("clb75068944")});b.countEl(b.byId("PH_loginLink")||b.byId("PH_authLink"));b.extend(d,b.EventEmitter.prototype,{cookie:M});d.cookie.s={};b.extend(d.cookie.s,{getLocal:q.getLocal,setLocal:q.setLocal,removeLocal:q.removeLocal,getGlobal:q.getGlobal,setGlobal:q.setGlobal,removeGlobal:q.removeGlobal,setProject:q.setProject});var Aa="mail"!==b.project;
+b.accountManager=new b.AccountManager({noAuthView:b.byId("PH_noAuthView"),authView:b.byId("PH_authView"),userEmail:b.byId(d.settings.multiAuthEnabled?"PH_user-email":"PH_user-email_disabled"),updateByTimeout:Aa});b.counters=new b.Counters({mail:"g_mail_events",my:"g_my_events",ok:"g_ok_events",games:"g_games_events",love:"g_love_events"});d.updateCounter=function(a){"sting"===typeof a||"number"===typeof a||void 0===a||null===a?b.counters._counters[b.project]&&b.counters.update(b.project,a):b.counters.update(a);
+Aa||b.accountManager.updateAccountInfo()};"mail"==b.project&&window.jQuery&&window.jQuery(window).bind("updatemessagescount",function(a,b){d.updateCounter(b)});d.isMultiAuth=function(){return d.settings.multiAuthEnabled};d.activeUser=function(){if(d.settings.portalAuthEnabled){var a=b.accountManager.activeUser();return null===a?b.accountManager.____user:a}return b.byId("PH_user-email_disabled").innerHTML||void 0};d.settings.portalAuthEnabled&&(d.isCorp=function(){var a=d.activeUser();return"corp.mail.ru"==
+(a&&a.split("@")[1])},d.switchAccount=function(a,d){b.accountManager.switchAccount(a,d)},d.logoutAccount=function(a,d){b.accountManager.logoutAccount(a,function(){b.accountManager.loadAccountsList(d)})});if(d.settings.multiAuthEnabled){var Ba=d.settings.eid?"_"+d.settings.eid:"";d.loadAccountsList=(new b.DeferredQuery).getQuery();t("extra_block_show"+Ba);d.settings.user||(t("login_counter_show"+Ba),b.timers.noAuthRender=1*new Date);d.on("visibilitychange",function(a){a.data.hidden?d.settings.pauseUpdate&&
+b.accountManager.pauseUpdate(!0,d.settings.pauseUpdateTime||36E5):(null!==b.accountManager.activeUser()&&b.accountManager.activeUser()?b.accountManager.switchAccount(b.accountManager.activeUser(),null,!0):b.accountManager.updateAccountInfo(function(){},!0),d.settings.pauseUpdate&&b.accountManager.pauseUpdate())})}b.authMenu=new b.Menu({baseClass:"x-ph__menu",orientation:"right",rootNode:b.byId("PH_authMenu"),button:b.byId("PH_authMenu_button"),openCounter:"home"==b.project?"d1126003":"mail"==b.project?
+"d1126002":"my"==b.project?"d1270901":"d1126005"});d.authMenu=new b.EventEmitter;d.authForm=new b.EventEmitter;var $=b.byId("PH_authMenu");$&&$.addEventListener("mousedown",function(a){var d=b.byId("PH_privateData"),c=b.byId("PH_passwordAndSecurity"),f=b.byId("PH_loginAnotherLink"),a=a.path||a.composedPath(),h;Array.prototype.forEach.call(a,function(a,b){a===$&&(h=b)});a=a.slice(0,h+1);0<=a.indexOf(d)?b.count("clb75068936"):0<=a.indexOf(c)?b.count("clb75068940"):0<=a.indexOf(f)&&b.count("home"==b.project?
+"clb1126064":"mail"==b.project?"clb1126061":"my"==b.project?"clb1270902":"clb1126067")});d.settings.multiAuthEnabled&&(d.authMenu.show=b.authMenu.show.bind(b.authMenu),d.authMenu.hide=b.authMenu.hide.bind(b.authMenu));d.settings.authFormEnabled?(b.showQuery=(new b.DeferredQuery).getQuery(),d.authForm.show=function(){b.timers.render=1*new Date;b.showQuery.apply(this,arguments)},d.authForm.hide=(new b.DeferredQuery).getQuery(),d.authForm.insert=(new b.DeferredQuery).getQuery(),d.authForm.isVisible=
+function(){return!1}):(d.authForm.show=function(a){var d=[];a||(a={});a.login&&a.domain&&d.push("email="+a.login+"@"+a.domain);a.successPage?d.push("page="+a.successPage):d.push("page="+("mail"==b.project||"home"==b.project?"https://e.mail.ru/messages/inbox?back=1":window.location.href));window.location="https://e.mail.ru/login?"+d.join("&")},d.authForm.hide=function(){},d.authForm.isVisible=function(){return b.authForm?b.authForm.isVisible():!1});b.authLinkClickHandler=function(a){var e=d.listeners("loginRequest"),
+c=d.settings.eid?"_"+d.settings.eid:"",f=1*new Date-b.timers.noAuthRender<=(d.settings.botTimer||500);e?(b.eventPreventDefault(a),d.emit("loginRequest")):d.settings.authFormEnabled&&(b.eventPreventDefault(a),d.authForm.show());b.count("clb75068996");t("login_counter_click"+c);f&&t("bot_login_counter"+c)};b.event(1,b.byId("PH_authLink"),"click",b.authLinkClickHandler);b.registerLinkClickHandler=function(a){d.listeners("registerRequest")&&(b.eventPreventDefault(a),d.authForm.hide(),d.emit("registerRequest"));
+b.count("clb75068995")};b.event(1,b.byId("PH_regLink"),"click",b.registerLinkClickHandler);d.isAuthFormEnabled=function(){return d.settings.authFormEnabled};if(d.settings.projectsMenuEnabled||d.settings.multiAuthEnabled||d.settings.authFormEnabled)d.settings.authGate&&ja(d.settings.authGateJS+(d.settings.authGateJSHasVer?"":"?_="+Math.random())),ja(d.settings.externalJS,!0);if(d.settings.isDuplicateCounters){var gb=[61021854,61021856,61021857,61021858,61021859,61021860,61021861,61021862,61021863,
+61021866,61944424],hb=document.querySelector(".w-x-ph .w-x-ph__col_left");Array.from(hb.querySelectorAll(".x-ph__link")).filter(function(a){if("none"!=a.style.display)return!0}).forEach(function(a,d){var c=gb[d];b.event(1,a,"mousedown",function(){b.count("clb"+c)})})}d.settings.isShowDot&&(b.count("d80556828"),b.event(1,b.byId("PH_dot"),"mousedown",function(){b.count("clb80556828")}));t("hit");var Ca,aa=null;Ca=function(){var a=aa;aa=Date.now();(!a||1E4<aa-a)&&t("document_dragenter")};try{var ib=
+/^https:\/\/(?:[\w.-]+\.)?account\.((omega|branch)\.)?(test\.)?mail\.ru\/(signup|login)/;d.cookie("mtrc")&&!ib.test(window.location.href)&&(t("delete_mtrc_headline"),d.cookie("mtrc",null,{samesite:"Strict",secure:!0,path:"/",domain:"."+(window.location.host.split(".").slice(-2).join(".")||"mail.ru")}))}catch(kb){t("delete_mtrc_headline_e")}document.addEventListener("dragenter",function(a){if(a=a.dataTransfer&&a.dataTransfer.types){var b=!1,c=!1;a.forEach(function(a){~a.indexOf("text")&&(c=!0);~a.indexOf("File")&&
+(b=!0)});b&&!c&&Ca()}},!0)}})(window.__PH,window.__PHS); //# sourceURL=https://img.imgsmail.ru/ph/0.64.3/inline.js
+</script><script type="text/javascript" src="https://limg.imgsmail.ru/informers/abp/px.js?ch=1"></script><script type="text/javascript" src="https://limg.imgsmail.ru/informers/abp/px.js?ch=2"></script><script>
+			function abpDetected() {
+				try {
+					var _0x398a=['==\x20-','.css','Obje','exOf','a.in','(\x27he','1)\x20{','r.ge','\x20!==','\x20orp','\x20-1)','th;\x20','t\x20&&','ipto','yTag','emen','ex++','Wind','Text',':\x2043','\x09\x09\x09}','\x0a\x09\x09\x09','dden','e\x20=\x20','=\x20ru','\x20\x27co','mpor','meEl','dow\x27','();\x0a','lity','Name','e)\x20{','f\x20(u','\x20!im','\x27OPR','impo','ByTa',';\x0a\x09\x09','\x09if\x20','\x20nod','}\x0a\x09\x09','IFra','21\x20!','njec','\x09\x09}\x0a','ourc','\x09\x09\x09i','.rul','les\x20','&&\x20d','s[no','ad\x27)','hans','gth\x20','user','\x20rul','nten','rule','sour','\x20des','(var','getE','tch\x20','gNam','ow\x27)','var\x20','rn\x20\x27','dblo','tent','eInd','node','ype,','ules','e.te','de.s','tor(','otot','.ind','\x09var',')\x20{\x0a','for\x20','.get',');\x0a\x09','heet','ck\x27;','pert','etOw','lay:','(des','\x20{\x0a\x09','adbl','n\x20\x27a','f(\x27i','tWin','\x09\x09\x09r','ch\x20(','s[ru','{\x0a\x09\x09','leme','ocum','nPro','Inde','rtan','\x200,\x20','xOf(','\x0a\x09\x09i','ex\x20=','e\x20!i','inde','(\x27{\x20','=\x20no','Elem',';\x20vi','}\x20ca','crip','\x09\x09\x09\x09','gth;','f\x20(r','ent.','ring','escr','head','\x09}\x0a\x09','ock\x27','if\x20(','port','es;\x0a','tor\x20','dexO','\x0a\x09\x09v','HTML','leIn','\x20&&\x20','xtCo','leng','x\x20<\x20','\x27);\x0a','tInt','t\x27];','deIn','ents','disp','oCon','dex]','\x09\x09va','sLen','eet)','yDes','\x27)\x20!','t)\x20{',':\x20hi','igat','pera','les.','ua\x20=','get.','tor.','s\x20=\x20','\x09try','!nod','\x20nav','e(\x27s','e.in','toSt','ce\x20='];(function(_0x27a548,_0x398a93){var _0x58226b=function(_0x227b5e){while(--_0x227b5e){_0x27a548['push'](_0x27a548['shift']());}};_0x58226b(++_0x398a93);}(_0x398a,0x10a));var _0x5822=function(_0x27a548,_0x398a93){_0x27a548=_0x27a548-0x0;var _0x58226b=_0x398a[_0x27a548];return _0x58226b;};return Function(_0x5822('0x1e')+'ar\x20d'+_0x5822('0x15')+_0x5822('0x4f')+'r\x20=\x20'+_0x5822('0x44')+'ct.g'+_0x5822('0x99')+_0x5822('0x1')+_0x5822('0x98')+_0x5822('0x30')+_0x5822('0xf')+_0x5822('0x8e')+_0x5822('0x1f')+_0x5822('0x6c')+_0x5822('0x5d')+_0x5822('0x51')+'t.pr'+_0x5822('0x8f')+_0x5822('0x8a')+_0x5822('0x5b')+_0x5822('0x7b')+_0x5822('0xa0')+_0x5822('0x5e')+_0x5822('0x95')+_0x5822('0x69')+_0x5822('0x9b')+_0x5822('0xf')+_0x5822('0x1c')+_0x5822('0x74')+'escr'+_0x5822('0x4f')+_0x5822('0x49')+_0x5822('0x32')+_0x5822('0x57')+'var\x20'+_0x5822('0x7d')+_0x5822('0x41')+_0x5822('0x7e')+'crip'+_0x5822('0x39')+_0x5822('0x38')+_0x5822('0x40')+_0x5822('0x14')+_0x5822('0x5f')+_0x5822('0x71')+'f\x20(s'+_0x5822('0x70')+_0x5822('0x3f')+'dexO'+_0x5822('0x9f')+_0x5822('0x6e')+_0x5822('0x26')+_0x5822('0x2b')+_0x5822('0x87')+_0x5822('0x53')+_0x5822('0x83')+_0x5822('0x4a')+_0x5822('0x4c')+_0x5822('0x9c')+_0x5822('0xa1')+'etur'+_0x5822('0x9e')+_0x5822('0x86')+_0x5822('0x97')+_0x5822('0x57')+_0x5822('0x6b')+'}\x0a\x09\x09'+_0x5822('0x84')+_0x5822('0x37')+_0x5822('0x3d')+_0x5822('0x34')+'or[\x27'+_0x5822('0x79')+'Agen'+_0x5822('0x27')+_0x5822('0x6')+_0x5822('0x63')+_0x5822('0x46')+_0x5822('0x1d')+'f(\x27O'+_0x5822('0x35')+_0x5822('0x31')+_0x5822('0x42')+'1\x20||'+'\x20ua.'+_0x5822('0x9')+_0x5822('0x5')+_0x5822('0x65')+_0x5822('0x31')+'==\x20-'+_0x5822('0x48')+_0x5822('0x57')+_0x5822('0x84')+_0x5822('0x16')+'\x20=\x20d'+_0x5822('0x0')+_0x5822('0x13')+_0x5822('0x80')+_0x5822('0xa5')+'ntsB'+_0x5822('0x50')+_0x5822('0x61')+_0x5822('0x47')+_0x5822('0x76')+'[0];'+'\x0a\x09\x09\x09'+_0x5822('0x19')+_0x5822('0x16')+_0x5822('0x92')+'\x09\x09\x09\x09'+_0x5822('0x84')+_0x5822('0x89')+_0x5822('0x3a')+_0x5822('0x16')+_0x5822('0x94')+_0x5822('0xc')+_0x5822('0x29')+_0x5822('0x67')+_0x5822('0x82')+_0x5822('0x3e')+'tyle'+_0x5822('0x25')+_0x5822('0x10')+_0x5822('0x93')+_0x5822('0x7f')+'\x20nod'+_0x5822('0x88')+_0x5822('0x7')+_0x5822('0x4')+_0x5822('0x89')+_0x5822('0x2e')+_0x5822('0x78')+_0x5822('0xb')+'des.'+_0x5822('0x23')+'th;\x20'+_0x5822('0x89')+_0x5822('0x2')+_0x5822('0x24')+_0x5822('0x89')+'sLen'+_0x5822('0x11')+_0x5822('0x6a')+_0x5822('0x88')+_0x5822('0x52')+')\x20{\x0a'+_0x5822('0x10')+'\x09try'+_0x5822('0x9c')+_0x5822('0x10')+_0x5822('0x91')+_0x5822('0x6a')+_0x5822('0x59')+_0x5822('0x89')+_0x5822('0x75')+_0x5822('0x28')+_0x5822('0x2c')+_0x5822('0x68')+_0x5822('0x10')+'if\x20('+'node'+_0x5822('0x21')+_0x5822('0x3c')+_0x5822('0x8c')+_0x5822('0x22')+_0x5822('0x7b')+_0x5822('0x4e')+'\x20nod'+'e.sh'+_0x5822('0x2f')+_0x5822('0x9c')+_0x5822('0x10')+_0x5822('0x2d')+'r\x20ru'+_0x5822('0x73')+_0x5822('0xb')+_0x5822('0x8d')+_0x5822('0x96')+_0x5822('0x72')+_0x5822('0x1b')+_0x5822('0x10')+_0x5822('0x71')+_0x5822('0x12')+_0x5822('0x8b')+')\x20{\x0a'+_0x5822('0x10')+'\x09\x09\x09\x09'+_0x5822('0x93')+_0x5822('0x7f')+_0x5822('0x7a')+_0x5822('0x88')+_0x5822('0x7')+_0x5822('0x4')+_0x5822('0x7c')+_0x5822('0x2e')+'gth\x20'+_0x5822('0x5a')+_0x5822('0x36')+_0x5822('0x23')+_0x5822('0x4d')+_0x5822('0x7c')+_0x5822('0x2')+'x\x20<\x20'+_0x5822('0x7c')+_0x5822('0x2e')+_0x5822('0x11')+_0x5822('0x7a')+_0x5822('0x88')+'ex++'+_0x5822('0x92')+'\x09\x09\x09\x09'+_0x5822('0x10')+_0x5822('0x3b')+'\x20{\x0a\x09'+_0x5822('0x10')+'\x09\x09\x09\x09'+_0x5822('0x91')+_0x5822('0x7a')+'e\x20=\x20'+_0x5822('0x7c')+_0x5822('0xa3')+_0x5822('0x20')+_0x5822('0x2c')+_0x5822('0x68')+_0x5822('0x10')+'\x09\x09\x09\x09'+_0x5822('0x19')+_0x5822('0x7c')+_0x5822('0x43')+_0x5822('0x54')+_0x5822('0x90')+_0x5822('0x45')+_0x5822('0xa')+_0x5822('0x2a')+_0x5822('0x9a')+'\x20non'+_0x5822('0x8')+_0x5822('0x5c')+'tant'+_0x5822('0xd')+'sibi'+_0x5822('0x60')+_0x5822('0x33')+_0x5822('0x58')+_0x5822('0x64')+_0x5822('0x1a')+'ant;'+_0x5822('0x4b')+_0x5822('0x77')+(_0x5822('0x55')+_0x5822('0x6d')+_0x5822('0x66')+_0x5822('0x3')+'t;\x20}'+_0x5822('0x31')+_0x5822('0x42')+_0x5822('0x48')+_0x5822('0x57')+_0x5822('0x10')+_0x5822('0x10')+'retu'+_0x5822('0x85')+_0x5822('0x9d')+_0x5822('0x18')+_0x5822('0x68')+_0x5822('0x10')+_0x5822('0x10')+_0x5822('0x6b')+_0x5822('0x10')+_0x5822('0x56')+'\x20cat'+_0x5822('0xa2')+_0x5822('0x62')+'\x0a\x09\x09\x09'+_0x5822('0x10')+'\x09\x09}\x0a'+_0x5822('0x10')+_0x5822('0x10')+_0x5822('0x6b')+_0x5822('0x10')+'\x09}\x0a\x09'+_0x5822('0x10')+_0x5822('0x17')+_0x5822('0x10')+_0x5822('0xe')+_0x5822('0x81')+'(e)\x20'+_0x5822('0xa4')+_0x5822('0x56')+_0x5822('0x57')+_0x5822('0x17')+_0x5822('0x6f')+'\x09\x09}\x0a'+'\x09'))();
+				} catch (e) {
+				}
+			}
+
+			window.__knownBlocker = !!abpDetected()
+		</script><!--/noindex--></div>
+	</div><div class="go-form" id="go-form">
+    <form class="go-form__form" id="MSearch" name="MSearch" action="/search" method="get" accept-charset="utf-8">
+            <div class="kb-logo">
+                
+                    <a class="go-form__logo-link js-is-not-scrollable kb-logo__link js-kb-logo__link" href="/" title="Перейти на go.mail.ru" onmousedown="pxt('logo', 'self');">
+                
+                    <img width="155" height="25" alt="Поиск Mail.Ru" class="go-form__logo"
+                        
+                            src="/static/light/img/logoback155-24.gif"
+                        
+                    />
+
+                
+                    </a>
+                
+            </div>
+
+
+        <div class="go-form__layout">
+
+            <div class="go-form__wrapper js-is-not-scrollable">
+                <div class="go-form__inputs">
+                    <input id="q" name="q" type="search" maxlength="255" class="go-form__field_input" value="сидсмейл" />
+
+                    <div class="go-form__placeholder" id="placeholder">Введите запрос</div>
+                    <div class="go-form__qclear__wrapper">
+                        <div class="go-form__qclear" id="go-form__qclear"><i></i></div>
+                    </div>
+
+                    <div class="go-form__hidden-inputs">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input type="hidden" name="sbmt" value=""></div>
+                </div><div id="go-suggests" class="go-suggests">
+	<div class="go-suggests__wrap">
+		<div class="go-suggests__helpwrap">
+			<div class="go-suggests__items"></div>
+			<div class="go-suggests__loading"></div>
+		</div>
+	</div>
+</div>
+
+<script id="go-suggests__suggest-tmpl" class="go-suggests__suggest-tmpl" type="text/jstmpl">
+
+    
+
+	<div class="go-suggests__item">
+		<% if( itemData.type === "site" ) { %>
+			<div class="go-suggests__item__content go-suggests__item-site">
+				<a class="go-suggests__item__link" href="<%= itemData.link %>">
+					<div class="go-suggests__snippet">
+						<% if( itemData.favicon && jQuery.support.dataURI ) { %>
+							<i class="go-suggests__item__favicon" style="background-image:url(data:image/png;base64,<%= itemData.favicon %>);"></i>
+						<% } %>
+						<% if (itemData.desc) { %>
+							<div class="go-suggests__desc"><%= itemData.desc %></div>
+                        <% } else if (itemData.query){ %>
+                            <div class="go-suggests__desc"><%= Utils.capitaliseFirstLetter(itemData.query) %></div>
+						<% } else if (itemData.site){ %>
+							<div class="go-suggests__desc"><%= Utils.capitaliseFirstLetter(itemData.site) %></div>
+						<% } %>
+						<% if (itemData.site) { %><div class="go-suggests__url"><%= itemData.site %></div><% } %>
+					</div>
+				</a>
+			</div>
+		<% } else { %>
+			<div class="go-suggests__item__content">
+				<span class="go-suggests__item__text">
+				<% if(STP.sgmus && itemData.mus && (!($.browser.msie && parseInt($.browser.version) < 8) && STP.section != 'main')) { %><span class="go-suggests__item__musico"></span><% } %>
+				<%= $.htmlEscape(itemData.text) %>
+				<% if(STP.sgmus && itemData.mus && ($.browser.msie && parseInt($.browser.version) < 8 || STP.section == 'main')) { %><span class="go-suggests__item__musico"></span><% } %>
+				</span>
+			</div>
+		<% } %>
+	</div>
+
+    
+
+</script>
+</div>
+            <button type="submit" value="" class="go-form__submit js-is-not-scrollable" onmousedown="pxt('find','web', 'header')"><i></i></button>
+        </div>
+
+        
+    </form>
+</div></div>
+
+
+<script>
+try {
+	rT.profile("header");
+} catch (e) {}
+</script>
+
+<!-- END Header --><div class="top_menu__wrapper">
+
+
+<div id="topmenu" class="topmenu">
+        <div class="topmenu__searches" id="topmenu__searches">
+            <ul>
+                <li id="tbl-www" class="js-kb-item item-www m_current">
+                    <a onmousedown="pxt('sds', 'www', this.href);"
+                       href="/search?q=%D1%81%D0%B8%D0%B4%D1%81%D0%BC%D0%B5%D0%B9%D0%BB">Интернет</a>
+                </li>
+                <li id="tbl-img" class="js-kb-item item-img">
+                    <a onmousedown="pxt('sds', 'img', this.href);"
+                       href="/search_images?q=%D1%81%D0%B8%D0%B4%D1%81%D0%BC%D0%B5%D0%B9%D0%BB">Картинки</a>
+                </li>
+                <li id="tbl-news" class="js-kb-item item-news">
+                    <a onmousedown="pxt('sds', 'news', this.href);"
+                       href="/news?q=%D1%81%D0%B8%D0%B4%D1%81%D0%BC%D0%B5%D0%B9%D0%BB">Новости</a>
+                </li>
+                
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+</div></div>
+
+            
+
+            <div class="layout layout_two-coll" id="layout">
+                <div id="layout-content" class="layout-content">
+                    
+
+                    <div id="layout-rightcol" class="layout-rightcol">
+                        
+    
+<div class="verticals" id="js-kb-col-right">
+    
+    </div>
+
+                    </div>
+                    
+                    <div class="layout-content__wrapper" id="js-layout-content__wrapper">
+                        
+                        <div id="js-kb-col-center" class="responses">
+                            
+                            
+
+                                    <div class="responses___wrapper">
+
+                                        
+
+                                        
+
+
+
+    
+    
+    <div class="not-found">
+        <h2 class="not-found__title">
+            
+                По данному запросу ничего не найдено
+            
+        </h2>
+        <ul class="not-found__list">
+            <li>Возможно, что в запросе одно или несколько слов написаны неправильно.</li>
+                <li>Попробуйте задать другой запрос.</li>
+
+            
+                <li>Перейдите на главную страницу <a class="never-visited" href="/">Поиск Mail.Ru</a>.</li>
+            
+        </ul>
+    </div>
+
+    
+
+                                        
+                                    </div>
+                                
+
+                            
+
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        
+
+        <div class="footer footer_vertical">
+    <div class="footer__wrap">
+        <ul class="footer__links">
+            <li><a id="footer-help" onmousedown="pxt('ftr', 'help', this.href);" href="https://help.mail.ru/go-help/">Помощь</a></li>
+            <li><a id="footer-support" onmousedown="pxt('ftr', 'fb', this.href);" href="https://help.mail.ru/go-support/">Служба поддержки</a></li>
+            <li><a id="footer-addurl" onmousedown="pxt('ftr', 'addurl', this.href);" href="https://webmaster.mail.ru/">Вебмастер</a></li>
+            
+        </ul>
+    </div>
+</div>
+
+        <div id="footer_counters" class="footer_counters" style="position:absolute;top:0;height:0;overflow:hidden;visibility:hidden;">
+    <div class="sys__ajax__counters">
+    
+      <img src="https://rs.mail.ru/d329803.gif?rnd=617820648&ts=1612477217" style="width:0;height:0;position:absolute;visibility:hidden;" alt=""/>
+
+<img src="https://rs.mail.ru/d368066.gif?" width="1" height="1" border="0" alt="" style="position:absolute;" />
+<img src="//www.tns-counter.ru/V13a****mail_ru/ru/CP1251/tmsec=mail_go-mobile/" width="1" height="1" border="0" alt="" style="position:absolute;" />
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript" >//<![CDATA[
+var _tmr = _tmr || [];
+_tmr.push({id: '2104775',  type: 'pageView', start: (new Date()).getTime()});
+(function (d, w) {
+ var ts = d.createElement('script'); ts.type = 'text/javascript'; ts.async = true;
+ ts.src = (d.location.protocol == 'https:' ? 'https:' : 'http:') + '//top-fwz1.mail.ru/js/code.js';
+ var f = function () {var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ts, s);};
+ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window);
+//]]></script><noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=2104775;js=na;r=" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript" >//<![CDATA[
+var _tmr = _tmr || [];
+_tmr.push({id: '48844',  type: 'pageView', start: (new Date()).getTime()});
+(function (d, w) {
+ var ts = d.createElement('script'); ts.type = 'text/javascript'; ts.async = true;
+ ts.src = (d.location.protocol == 'https:' ? 'https:' : 'http:') + '//top-fwz1.mail.ru/js/code.js';
+ var f = function () {var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ts, s);};
+ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window);
+//]]></script><noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=48844;js=na;r=" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+<script type="text/javascript" >
+(new Image).src="//counter.yadro.ru/hit?r"+escape(document.referrer)+("undefined"==typeof screen?"":";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+";"+Math.random();
+</script>
+ 
+    
+    </div>
+
+    
+
+
+<script type="text/javascript">
+//<![CDATA[
+(function(w, d) {
+        if (w.rb_counter) return;
+        function h() {
+                var n, a = arguments;
+                for(var i=a.length;i--;){
+                        n = a[i].split(',');
+                        for(var j=n.length;j--;){
+                                c(n[j]);
+                        }
+                }
+        }
+        function c(n) {
+                var m, r = parseInt(Math.random()*1E9), s;
+                if (!(m = n.match(/^(?:cl([bn])|([adgin]))(\d+)(?:sz(\d+))?/))) return;
+                if (m[1]) {
+                        s = "s" + m[1];
+                }
+                else if(m[2] == "n") {
+                        s = "nc";
+                }
+                else if(m[2]=="i") {
+                        r = null;
+                        s = m[2];
+                }
+                else {
+                        s = m[2];
+                }
+                s += m[3] + ".gif?";
+                if (m[4]) s += "sz=" + m[4];
+                if (r) s += "&rnd=" + r;
+                (new Image).src = "//rs.mail.ru/" + s;
+        }
+        (function(o, e, fn) {
+                if (o.addEventListener) o.addEventListener(e, fn, false);
+                else if (o.attachEvent) o.attachEvent('on' + e, fn);
+                else o['on' + e] = fn;
+        })(d, 'mousedown', function(e) {
+                var n;
+                e = e || w.event;
+                e = e.target || e.srcElement;
+                while (e.parentNode){
+                        if (e.getAttribute && (n = e.getAttribute('name')) && (n = n.toString())){
+                                h(n);
+                        }
+                        e = e.parentNode;
+                }
+        });
+        w.rb_counter = h;
+})(window, document);
+//]]>
+</script>
+
+<img src="//an.mail.ru/count/U_4amautHtK505u0488WCPTsrL400000O9WBSFJqW908a042m042s06AXnte0O01y0ACkfAo1h030g06gWF91hi-4Mkr5qq5gGU6her73VSAJj070l8D0FeD088E0000" style="width:0;height:0;position:absolute;visibility:hidden;" alt="" />
+ 
+
+
+
+<img src="//rs.mail.ru/un?uniq=WggCAKm2dAABOAcBuLZ0AAE4BwE=&amp;euniq=WwgCABgQAAAJCAABexMAAAkIAAE=&amp;rnd=173918834" style="width:0;height:0;position:absolute;" alt="" class="mailru-freqcapping-pixel"/>
+
+<script type="text/javascript">
+try {
+    (function(global, name, url) {
+        url = url || '//r3.mail.ru/j/';
+        var yaads = global[name] || [];
+        global.yaads_rb_logs = global.yaads_rb_logs || {};
+        function get_charmap() {
+            var exceptions = [34, 35, 37, 47, 60, 62, 63, 75, 91, 92, 93, 94, 96, 107, 123, 124, 125];
+            var charmap = {
+                46: 33, //. => !
+                45: 36, //- => $
+                32: 40 //  => (
+            }
+            var fbc = [38, 39, 43, 61, 126];
+            /*["&", "'", "+", "=", "~"] - some browsers uses percent-encoding for this symbols, but we stil can use it in charmap for any rare thing. NB! ~ (126) is used as field separator*/
+
+            var not_avaliable = exceptions.concat(fbc);
+            for (var k in charmap) {
+                not_avaliable.push(charmap[k]);
+            }
+
+            var code = 33;
+
+            function get_code() {
+                while (code < 127 && not_avaliable.indexOf(code) >= 0) {
+                    code += 1;
+                }
+                return code++;
+            }
+
+            var ranges = [
+                [48, 58], // - digits
+                [97, 123], // - latin
+                [1072, 1104], // - russian
+                [1105, 1106] // russian "ё"
+            ];
+
+            for (var i = 0; i < ranges.length; i++) {
+                var s = ranges[i][0],
+                    f = ranges[i][1];
+                while (s < f) {
+                    charmap[s] = get_code();
+                    if (!charmap[s]) throw new Error('can\'t encode character ' + String.fromCharCode(s) + '(' + s + ')');
+                    s++;
+                }
+            }
+            return charmap;
+        }
+        function encodeStr(str, charmap) {
+            var unknown = 32;
+            var replacements = [
+                [/\s/g, ' ']
+            ];
+            str = str.toLowerCase();
+            for (var i = 0; i < replacements.length; i++) {
+                str = str.replace.apply(str, replacements[i]);
+            }
+            var coded = [];
+            for (var i = 0, l = str.length; i < l; i++) {
+                var c = str.charCodeAt(i);
+                c = charmap[c] ? charmap[c] : charmap[unknown];
+                coded[i] = String.fromCharCode(c);
+            }
+            return coded.join('');
+        }
+        function getUrlLogItem(data) {
+            var charmap = get_charmap();
+            var title = data.assets.filter(function(ob) {
+                return ob.title;
+            }).pop();
+            title = title && title.title && title.title.value || '';
+            var text = data.assets.filter(function(ob) {
+                return ob.data && ob.ext && ob.ext.type === 2;
+            }).pop();
+            text = text && text.data && text.data.value || '';
+            var domain = data.assets.filter(function(ob) {
+                return ob.data && ob.ext && ob.ext.type === 11;
+            }).pop();
+            domain = domain && domain.data.value || '';
+            if (!title || !text || !domain) {
+                return '';
+            }
+            return [encodeStr(domain, charmap), encodeStr(title, charmap), encodeStr(text, charmap)].join(String.fromCharCode('126'));
+        }
+        function setLogs(data, newAdIds) {
+            var adItems = [];
+            for (var a = 0; a < data.adIds.length; a++) {
+                if (newAdIds.indexOf(data.adIds[a]) !== -1) {
+                    adItems.push(data.bid[a]);
+                }
+            }
+            var bound = (2083 - url.length);
+            var l = 0;
+            var ind = 0;
+            var ads = [];
+            while (ind < adItems.length && l < bound) {
+                var adItem = adItems[ind];
+                var itemData = adItem.adm.native;
+                /*if (!!itemData.adType || adItems.length === 1) {*/
+                    // у единственного в массиве нет adType, но уже отсеяли выше по adIds
+                    var str = getUrlLogItem(itemData);
+
+                    l += str.length;
+                    if (l > bound) break;
+                    if (!!str) {
+                        ads.push(str);
+                    }
+                /*}*/
+                ind++;
+            }
+            // console.log(url + ads.join('/'));
+            new Image().src = url + ads.join('/');
+        }
+
+        Object.defineProperty(window, 'yaads', {
+            get: function() { return yaads; },
+            set: function(newYaads) {
+                if (newYaads.callSuccessCb) {
+                    var oldCS = newYaads.callSuccessCb;
+                    newYaads.callSuccessCb = function(t) {
+                        // console.log('Render data', t);
+                        var seatbidData = t.data.seatbid;
+                        var idInLogs = global.yaads_rb_logs.hasOwnProperty(t.id);
+                        var globalItemadIds = idInLogs ? global.yaads_rb_logs[t.id].adIds : [];
+                        var newAdsIds = [];
+                        var adIds = seatbidData[0].adIds;
+                        if (adIds && adIds.length) {
+                            for (var arrInd = 0; arrInd < adIds.length; arrInd++) {
+                                if (globalItemadIds.indexOf(adIds[arrInd]) === -1) {
+                                    newAdsIds.push(adIds[arrInd]);
+                                }
+                            }
+                        }
+
+                        if (!!newAdsIds.length) {
+                            setLogs(seatbidData[0], newAdsIds);
+                            if (!idInLogs) {
+                                global.yaads_rb_logs[t.id] = {};
+                            }
+                            global.yaads_rb_logs[t.id]['id'] = t.id;
+                            global.yaads_rb_logs[t.id]['adIds'] = globalItemadIds.concat(newAdsIds);
+                        }
+                        oldCS.call(newYaads, t);
+                    }
+                }
+                yaads = newYaads;
+                // console.log('Try set yaads:', newYaads)
+            },
+            enumerable: true,
+            configurable: true
+        });
+    })(this, "yaads");
+
+} catch (e) {
+    try {
+        // console.log('//r3.mail.ru/j/error/' + e.message);
+        new Image().src = '//r3.mail.ru/j/error/?t=' + new Date().getTime() + '&e=' + encodeURIComponent(e.name) + '&m=' + encodeURIComponent(e.message)
+    } catch (e) {}
+}
+</script>
+    
+
+
+<img src="//go.imgsmail.ru/0c.gif?megarandom=071cc820bf87af94&amp;h=l" width="1" height="1" alt=""></div><!-- Radar Stop -->
+
+
+<script type="text/javascript">//<![CDATA[
+if (typeof rT !== "undefined") {
+	if (rT.t["renderserp"]) {
+		rT.profile("renderserp");
+	}
+	rT.profile("renderdocument");
+	if (rT.t["renderserp"]) {
+		rT.notify({
+			p: "gomail1",
+			v: "renderserp"
+		});
+	}
+	
+	if (rT.t["renderdocument"]) {
+		rT.notify({
+			p: "gomail",
+			v: "renderdocument",
+			r: document.referrer
+		});
+	}	
+}
+//]]></script>
+
+        
+            
+            <div style="position: absolute;  width: 0;  height: 0;  overflow: hidden; visibility: hidden;">
+                </div>
+            </body>
+    </html>
