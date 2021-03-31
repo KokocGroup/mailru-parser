@@ -12,6 +12,6 @@ setup(
     packages=['mailru_parser'],
     install_requires=[
          'pyquery==1.2.1',
-         'lxml==2.3.4',
+         'lxml==4.6.3',
     ],
 )
